@@ -14,4 +14,4 @@ setenv -p bnh "memload boot cm; ifconfig -auto eth0; boot -loader=px 10.131.5.52
 
 
 <<======================><======================>>dev-arm_local_Kernel<<======================><======================>>
-setenv -p STARTUP 'boot -tftp=10.131.5.52:Minos_gen12/zkernel.px2 nfsinit=10.131.5.52:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root rw'
+setenv -p STARTUP 'boot -tftp=10.131.13.180:Minos_gen12/zkernel.px2 nfsinit=10.131.13.180:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root rw'
