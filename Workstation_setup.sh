@@ -149,3 +149,14 @@ cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 #	-> Sourcepath -> /home/agherca/sandbox/agherca-workspace2/b-tcdui-mainline/dev-host/root/haxe/std
 #File -> Project Structure... -> Project -> Project SDK: -> workspace2_tcdui_mainline_release-host_haxe3.3_sdk (3.3.0)
 
+
+(#Qt Creator)
+#In order to have a kit,  install Qt 5.9.2 or another one beside the standard package
+#Import project (do not create a new one) and use Qt as a text editor
+#Resolve includes in QtPrj_Name.icludes like this:
+	#Add modified lines with ISM_Name after the last slash removed
+	#	(e.g.  	in TvLiveCacheAction.C -> #include <appact/TvAppActClient.h>; 
+	#		in QtPrj_TiVo.includes -> exists sw/spigot/common/include/appact
+	#	 	in QtPrj_TiVo.includes -> add sw/spigot/common/include)
+#In QtPrj_Name.icludes add:  /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/root/include
+
