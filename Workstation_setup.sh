@@ -93,8 +93,6 @@ p4v
 #Edit -> Preferences... -> Merge -> Other application -> Browse -> /usr/bin/bcompare -> Apply -> OK
 
 
-
-
 (#TFTP)
 sudo apt-get install xinetd tftpd tftp
 sudo subl /etc/xinetd.d/tftp
@@ -149,6 +147,19 @@ cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 #	-> Sourcepath -> /home/agherca/sandbox/agherca-workspace2/b-tcdui-mainline/dev-host/root/haxe/std
 #File -> Project Structure... -> Project -> Project SDK: -> workspace2_tcdui_mainline_release-host_haxe3.3_sdk (3.3.0)
 
+#Additional Settings for a comfortable experience
+#Editor -> General -> Editors Tabs  [uncheck]Show tabs in single row | Tab limit -> 23
+#Appearance Theme -> Darcula
+#Flex Compiler heap size 4096 (not needed for newer versions of Idea Intellij)
+#Key shortcuts:
+	#Undo Ctrl + Z
+	#Redo Ctrl + Y
+	#Back -> Alt + LeftArrow
+	#Forward -> Alt + RightArrow
+	#Reopen Closed Tab -> Ctrl + Shift + T
+	#Previous Tab -> Ctrl + Alt + LeftArrow
+	#Next Tab -> Ctrl + Alt + RightArrow
+#[uncheck]Automatically check for updates
 
 (#Qt Creator)
 #In order to have a kit,  install Qt 5.9.2 or another one beside the standard package
@@ -163,3 +174,6 @@ cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 	#~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/QtPrj_Name.creator
 #QtPrj_Name.pro  is not used and can be removed
 
+#Additional Settings for a comfortable experience
+#Tools -> Options... -> Text Editor -> Color Scheme for Qt Creator Theme "" -> Qt Creator Dark
+#Tools -> Options... -> Environment -> Keyboard -> Redo -> Shortcut -> Reset -> Record -> Ctrl + Y -> Stop Recording
