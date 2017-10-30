@@ -19,5 +19,5 @@ setenv -p bnh "memload boot cm; ifconfig -auto eth0; boot -loader=px 10.131.5.52
 setenv -p STARTUP 'boot -tftp=10.131.13.180:Minos_gen12/zkernel.px2 nfsinit=10.131.13.180:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root rw'
 
 <<======================><======================>>dev-arm_server_Kernel<<======================><======================>>
-setenv -p STARTUP "GOSTART"
-setenv -p GOSTART "ifconfig eth0 -auto; sleep 20; boot -pkg xnfs12.trec.tivo.com:/dev-arm/Arr01/kernel/zkernel-harmony.pkg 'nfsinit=10.131.13.180:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root ip=dhcp BCC=production'"
+setenv -p STARTUP "go"
+setenv -p go "ifconfig eth0 -auto; sleep 100; boot -pkg xnfs12.trec.tivo.com:/dev-arm/Arr01/kernel/zkernel-harmony.pkg 'nfsinit=10.131.13.180:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root ip=dhcp BCC=production rw sysgen=false handcraft=false'"
