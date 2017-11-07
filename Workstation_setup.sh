@@ -162,13 +162,20 @@ cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 #[uncheck]Automatically check for updates
 
 (#Qt Creator)
-#In order to have a kit,  install Qt 5.9.2 or another one beside the standard package
-#Import project (do not create a new one) and use Qt as a text editor
+#In order to have a kit,  install Qt 5.9.2 or another one beside the standard package.
+#In order to use Qt as a text editor for TiVo client sources, import project as follows:
+#Launch Qt Creator 4.4.1 (Community)
+#File -> New File or Project...
+#	->Projects -> Import Project -> Import Existing Project -> Choose...
+#	->Project name: QtPrj_TiVo
+#	->Location: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot -> Next>
+#	->Show files matching: *.cc; *.cpp; *.cp; *.cxx; *.c++; *.h; *.hh; *.hpp; *.hxx;*.cydoc;*.xml;*.schema;*.C;*.contract;*.cyimp;*.idl;Makefile;ismdefs;ismrules;*.py;*.c
+#	->Apply Filter -> <Back -> Next> (Needed for refreshing the filter!) -> Next -> Finish
 #Resolve includes in QtPrj_Name.includes like this:
-	#Add modified lines with ISM_Name after the last slash removed
-	#	(e.g.  	in TvLiveCacheAction.C -> #include <appact/TvAppActClient.h>; 
-	#		in QtPrj_TiVo.includes -> exists sw/spigot/common/include/appact
-	#	 	in QtPrj_TiVo.includes -> add sw/spigot/common/include)
+#	Add modified lines with ISM_Name after the last slash removed
+#		(e.g.  	in TvLiveCacheAction.C -> #include <appact/TvAppActClient.h>; 
+#			in QtPrj_TiVo.includes -> exists sw/spigot/common/include/appact
+#	 		in QtPrj_TiVo.includes -> add sw/spigot/common/include)
 #In QtPrj_Name.icludes add:  /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/root/include
 #When starting Qt Creator (Community) open the project using:
 	#~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/QtPrj_Name.creator
@@ -177,3 +184,5 @@ cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 #Additional Settings for a comfortable experience
 #Tools -> Options... -> Text Editor -> Color Scheme for Qt Creator Theme "" -> Qt Creator Dark
 #Tools -> Options... -> Environment -> Keyboard -> Redo -> Shortcut -> Reset -> Record -> Ctrl + Y -> Stop Recording
+#Tools -> Options... -> Environment -> Keyboard -> Locate -> Shortcut -> Reset -> Record -> Ctrl+Shift+A -> Stop Recording
+#	->Apply -> OK
