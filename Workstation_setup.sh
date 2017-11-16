@@ -170,7 +170,16 @@ cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 #	->Project name: QtPrj_TiVo
 #	->Location: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot -> Next>
 #	->Show files matching: *.cc; *.cpp; *.cp; *.cxx; *.c++; *.h; *.hh; *.hpp; *.hxx;*.cydoc;*.xml;*.schema;*.C;*.contract;*.cyimp;*.idl;Makefile;ismdefs;ismrules;*.py;*.c
-#	->Apply Filter -> <Back -> Next> (Needed for refreshing the filter!) -> Next -> Finish
+#	->Hide files matching: 
+#	->Apply Filter -> <Back -> Next> (Needed for refreshing the filter!) -> Next
+#	->Add to version control: -> Configure... -> Perforce ->
+#		->Environment Variables
+#			->P4 port: perforce.trec.tivo.com:1666
+#			->P4 client: agherca-workspace2
+#			->P4 user: agherca
+#		->Test -> Test succeeded (/home/agherca/sandbox/agherca-workspace2).
+#		->Apply ->OK
+#	->Finish
 #Resolve includes in QtPrj_Name.includes like this:
 #	Add modified lines with ISM_Name after the last slash removed
 #		(e.g.  	in TvLiveCacheAction.C -> #include <appact/TvAppActClient.h>; 
