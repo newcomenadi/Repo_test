@@ -9,6 +9,15 @@ uname -a
 cbe NO_TESTS=1 NO_AUDIT=1 NO_ENCORE=1 make
 cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 
+<<======================><======================>>Push TcdSchema to TcdClient<<======================><======================>>
+PUSH_TIVO_SYSTEM='$$TIVO_SYSTEM'
+cd ~/sandbox/agherca-workspace2/b-tcdschema-mainline/srcroot/
+source SOURCEME.SH dev-arm
+cbe make push-script>>push2tcdclient.sh
+subl push2tcdclient.sh
+	#location of target roots PUSH_TGT=/.../b-tcdclient-harmony
+cbe PUSH=1 NO_TESTS=1 NO_AUDIT=1 make
+
 <<======================><======================>>Bootstrapping-InitialSetup<<======================><======================>>
 cbe make setup-roots && cbe make unsymlink && cbe make strip && cbe make xnfsimage && cbe make monolithic
 
