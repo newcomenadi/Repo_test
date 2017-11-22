@@ -14,14 +14,16 @@ cbe make -j16 && cbe make linkroot && cbe make copyimage
 cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/tvsql
 cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/npk
 cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/tivoapp
+#TcdClient full build
+cbe NO_TESTS=1 NO_AUDIT=1 make -j16 && cbe make unsymlink && cbe make strip && cbe make xnfsimage && cbe make monolithic
 
 <<======================><======================>>Push TcdSchema to TcdClient<<======================><======================>>
-PUSH_TIVO_SYSTEM='$$TIVO_SYSTEM'
-cd ~/sandbox/agherca-workspace2/b-tcdschema-mainline/srcroot/
+cd ~/.../b-tcdschema-mainline/srcroot/
 source SOURCEME.SH dev-x86
 cbe make push-script>>push2tcdclient.sh
 subl push2tcdclient.sh
-	#location of target roots PUSH_TGT=/.../b-tcdclient-harmony
+    export PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdclient-harmony
+    export PUSH_TIVO_SYSTEM=dev-arm
 cbe PUSH=1 NO_TESTS=1 NO_AUDIT=1 make
 
 <<======================><======================>>Bootstrapping-InitialSetup<<======================><======================>>
