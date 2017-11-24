@@ -16,6 +16,10 @@ cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/npk
 cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/tivoapp
 #TcdClient full build
 cbe NO_TESTS=1 NO_AUDIT=1 make -j16 && cbe make unsymlink && cbe make strip && cbe make xnfsimage && cbe make monolithic
+#TcdClient NPK build
+cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/npk && cbe make -j16 && cbe make linkroot && cbe make copyimage
+#TcdClient
+cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/tivoapp && cbe make -j16 && cbe make linkroot && cbe make copyimage
 
 <<======================><======================>>Push TcdSchema to TcdClient<<======================><======================>>
 cd ~/.../b-tcdschema-mainline/srcroot/
