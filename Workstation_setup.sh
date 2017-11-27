@@ -192,6 +192,8 @@ cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 
 #Additional Settings for a comfortable experience
 #Tools -> Options... -> Text Editor -> Color Scheme for Qt Creator Theme "" -> Qt Creator Dark
-#Tools -> Options... -> Environment -> Keyboard -> Redo -> Shortcut -> Reset -> Record -> Ctrl + Y -> Stop Recording
-#Tools -> Options... -> Environment -> Keyboard -> Locate -> Shortcut -> Reset -> Record -> Ctrl+Shift+A -> Stop Recording
+#Tools -> Options... -> Environment -> Keyboard -> ...Command... -> Shortcut -> Reset -> Record -> ...Key sequence... -> Stop Recording
+#	...Redo...Ctrl + Y...
+#	...Locate...Ctrl+Shift+A...
+#	...Line in current document...Ctrl + G...
 #	->Apply -> OK
