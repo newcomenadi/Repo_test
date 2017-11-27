@@ -1,0 +1,255 @@
+Voice active on dev-host (simulator) instead of the actual box. (12th June 2017)
+  Lu-Chun Liao:
+  For those who use tcdui simulator for voice client development:
+  For tcdui simulator to work for voice, we need env VOICE_TEST_ON_SECONDARY_DISPLAY in harmony test.conf. 
+  Once tcdui simulator is down, you need to restart ui on the box to switch the display back to box.
+
+Find box type by TSN, TiVo boxes (13th June 2017)
+  George Grigore:
+  cauta primele 3 caractere in tabelul de pe
+  https://bigbook.tivo.com/index/TRECADMIN?
+  highlight=trec+inventory#006c1d80db9d2fe8bad51a2d8df7c868
+  
+  Tiberiu Teodorescu:
+  HpkInfo in handcraft
+  te uiti apoi dupa campul "Implementation" si la
+  https://bigbook.tivo.com/index/TCDPlatformOverview?highlight=TCD%2520platform
+  
+  Anda Ungureanu:
+  stie cineva o pagina(wiki sau big book) care sa aiba informatii (asocieri intre serie,
+  generatie si nume) despre cutiile Tivo?
+  
+  Razavan Antohi:
+  https://bigbook.tivo.com/index/TCDPlatformOverview?highlight=platform+index
+
+Voice on simulator (dev-host) (13th June 2017)
+  dev-arm/tivo_root/test.conf
+  export VOICE_TEST_ON_SECONDARY_DISPLAY=1
+
+Idea Intellij setup (14th June 2017)
+  https://wiki.tivo.com/wiki/IntelliJ_IDEA_Setup_for_Haxe_Encore_Development
+  https://wiki.tivo.com/wiki/Tcdui_Clientcore_Developer_Workflow
+  Intellij version 14.1.7 (also used in docker cbe)
+  haxe plugin version (see below): https://files.slack.com/files-pri/T0EGV4Q1E-F5QNH967L/pasted_image_at_2017_06_08_05_27_pm.png
+  https://files.slack.com/files-pri/T0EGV4Q1E-F6689J2LC/pasted_image_at_2017_07_10_12_57_pm.png
+
+P4 Perforce (19th June 2017)
+  Stefan Balmus:
+  daca nu va merge perforce.trec.tivo.com:1666 incercati cu p4proxy.tivo.com:1666
+  
+  Perforce terminal $: p4v ... close p4 button ... Edit -> Connections -> Show Perforce Connection dialog
+  Perforce terminal $: subl ~/.bashrc
+  #export P4PORT=perforce.trec.tivo.com:1666
+  export P4PORT=p4proxy.tivo.com:1666
+
+Outer Procedures (21st June 2017)
+  Locally installed outer procedures:
+  https://wiki.tivo.com/wiki/User:Adobrea/Kubuntu_X64_TiVo_Workstation_Setup#Install_Outer_Procedures_Locally
+
+SongBird Report (28th June 2017)
+  Cristian Nantu:
+  "FYI when you get that blue assert "please file this problem" page, press THUMBS UP
+  once and it will generate a songbird.  The screenprint will be the underlying screen and
+  there will be a new "crash report" tab with the error message"
+  
+  Ovidiu Gheorghies:
+  Encore/Hydra: `PAUSE – FWD – REW – PAUSE – 4 – 1 – 1
+    
+Environments (5th July 2017)
+  https://bigbook.tivo.com/index/MovingBetweenUSQE1andStaging
+  DC_usqe1 (Use this only for TCDs that are running client code that is below 1.9)
+  DC_usqe1Bcc (Use this only for TCDs that are running client code that is 1.9 or above).
+
+TTS (10th July 2017)
+  Add this in tcdui Config_xmls in order to activate TTS on simulator:
+  <CcbSwitchOverride><name>ENABLE_TEXT_TO_SPEECH</name><version>CCBAPPROVED</version></CcbSwitchOverride>
+  
+Spigot (12th July 2017)
+  Spigot info:
+  https://bigbook.tivo.com/index/SpigotOverview
+  https://bigbook.tivo.com/index/ConfiguringSpigotOnATcd
+
+IP for TCDUI on box (17th July 2017)
+  Ovidiu Andronachi:
+  IP 127.0.0.1
+  asta iti trebuie daca vrei sa rulezi tcdui pe cutie
+
+Switch Hydra, Encore key sequence 18th July 2017
+  thumbs down, thumbs up, backwards, backwards
+  tools/tcdclient/common/features/tcdclient/graph.features -> remove line 1696:  ENABLE_HYDRA_UI_AS_DEFAULT_UI_ON_BOOT
+  Flags:  DG_HDUI_WIP_2  or  DG_HDUI_WIP3
+
+Voice Strip (20 July 2017)
+  Voice Strip -> View All Screen
+  Alexandru Andrei:
+  Regarding VIEW ALL tile not being seen on voice strip, the box needs to
+  have DG_HDUI_WIP_3 flag set on service portal
+  SF_preview_102 face enable la voice Tvfeature flag, AP voice la application activation voice flag
+
+Test Reports (20th July 2017)
+  Ovidiu Gheorghies:
+  (1) generate coverage-generating test code globally, for all projects, from upper-level
+  make: `cbe make MCOVERAGE=all MCOVER_INCLUDE_BLOCKS=true`
+  (2) generate coverage report from `project/test`: `cbe make MCOVERAGE=all cover >coverage.txt`
+  As show here (2 examples): https://git.tivo.com/dev/mcover-visual-report
+  
+Tivo bash scripts for development (25th July 2017)
+  Ovidiu Gheorghies:
+  https://git.tivo.com/dbradu/TiVo-dev-scripts
+
+TSNs and Environments (26th July 2017)
+  Adrian Gherca     8F90001901E26BD
+  Alexandru Andrei  8D9600190384CB1
+  Stefan Comanescu  8D9600190384D6A
+  Cristian Nantu    8D9600190384B8B
+  Laurentiu Luncanu 8F90001901E29E8
+  Stefan Balmus     8D9000190315A96
+  DC_cdvrqe1
+  DC_Staging
+  DC_usqe1
+
+Pluralsight (27th July 2017)
+  user: thinslices    pass: tsd1234
+  site: http://pluralsight.com
+
+Voice DigitalSmiths Utterance Search Results (27th July 2017)
+  http://10.100.42.211:9000/
+
+Bootstrapping TCDs Minos (28th July 2017)
+  Setup from locally built roots
+  setenv STARTUP 'boot -tftp=xnfs12.trec.tivo.com:dev-arm/Gen12/kernel/zkernel.px2
+    nfsinit=10.131.5.52:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root sysgen=true rw'
+  build-disk / && sync && reboot
+  finally: Guided Setup on box
+
+Test.conf (1st August 2017)
+  b-tcdclient-harmony/dev-arm/tivo_root/test.conf
+  export PREVIEW_FEATURES="387"
+  export VOICE_TEST_ON_SECONDARY_DISPLAY=1
+
+Builds manual transfer to Iasi (2nd August 2017)
+  http://builds:8080/job/Transfer%20Initiation/build?delay=0sec
+  Fill in e.g. clientcore + build id + flavour in order to transmit it to Iasi
+
+Adjust date - time display format (29th August 2017)
+  right click on time (bottom right corner) -> Configure ->
+  %a %e %b %l:%M:%S
+  
+  Choose Linux Kernel at startup
+  sudo subl /etc/default/grub
+    #GRUB_HIDDEN_TIMEOUT=0
+  sudo update-grub
+
+TiVo Activity Haxelib (1st September 2017)
+  Todd Kulick:
+  https://www.youtube.com/watch?v=YAICeJdzptk&t=1275s
+  
+Developer Cheats (5th September 2017)
+  Stefan Balmus:
+  stie cineva de unde se pot instala cheat-urile despre care se vorbeste aici?
+  https://bigbook.tivo.com/index/DeveloperCheats
+  Ilie Halip:
+  //depot/b-tivocheats/
+
+Send keys through Telnet (17th October 2017)
+  Simulator dev-host keyboard
+  sendkey -i
+
+Server Not Found; BigBook, TiVoWiki (18th October 2017)
+  editeaza fisierul `cat /etc/resolv.conf`  astfel:
+  # Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8)
+  #     DO NOT EDIT THIS FILE BY HAND -- YOUR CHANGES WILL BE OVERWRITTEN
+  nameserver 192.168.180.100
+  nameserver 10.131.8.39
+  nameserver 127.0.1.1
+  search trec.tivo.com tivo.com
+  si reporneste browserul
+  ...or... (30th October)
+  sudo xed /etc/resolvconf/resolv.conf.d/base
+  nameserver 192.168.180.100
+  nameserver 10.131.8.39
+  nameserver 127.0.1.1
+  search trec.tivo.com tivo.com
+
+Outer Procedures (23th October 2017)
+  Outer procedures instalat ca symlink catre /net/rpmsrv/... si odata cu schimbarea de dns nu se mai rezolva:
+  https://git.tivo.com/ihalip/bootstrap-system/src/f99a484d0901b347115c16ce013eb9f1653dd690/07-install-outer-procedures.sh
+  ... replace `/cbe2` cu `$CBE_ROOT`
+
+LeapFrog Virgin Media (25th-31st October 2017)
+  Comanda seriala Boot LeapFrog Virgin Media, Narcisa Nistor:
+  ifconfig eth0 -auto; sleep 20; boot -pkg xnfs12.trec.tivo.com:/dev-arm/Arr01/kernel/zkernel-harmony.pkg
+    'nfsinit=10.131.5.65:/home/nnistor/sandbox/nnistor-workspace/b-tcdclient-harmony/dev-arm/tivo_root ip=dhcp BCC=production'
+  
+  LeapFrog remote pair procedure (tested OK):
+  1. Go to Home > Help & Settings > Settings > Devices > Remote Control Pairing.
+  2. Press and hold the Info (or Guide on some remotes) button for 7 seconds until the light at the top of the remote goes solid green then flashes green twice.
+
+  Or, by using the Virgin TV V6 box and remote (not tested):
+  1. Press the Channel Down button on the front of the Virgin TV V6 box for 10 seconds.
+  2. Then, hold the Info button down on the remote for 7 seconds. The light on the top of the remote will flash green twice.
+  
+  LeapFrog TSN through Telnet:
+  testGetTsn
+  printenv | grep "Serial"
+  
+  .../b-tcdclient-harmony/dev-arm/tivo_root/test.conf ...from Narcisa Nistor
+  #### ( Virgin media ) exports ########
+  export COMPASS_NO_NIT_ACQUISITION_SCANNING=1
+  export COMPASS_INSTALLER_FREQUENCY=466.75
+  export COMPASS_INSTALLER_MODULATION=QAM_64
+  export COMPASS_INSTALLER_SYMBOL_RATE=6.952
+  export COMPASS_INSTALLER_NETWORK_ID=41041
+  
+  Remove annoying OSD from Virgin Media on Leapfrog:
+  dvbappccmd -debug "echo 0x0405 01"
+  
+  On LeapFrog or other boxes, if serial debug cannot be reached with Ctrl + c keys
+  because $STARTUP is defined with boot command,
+  at SSBL> toggle "auto" then type "debug" then hit enter and immediately press Ctrl + c
+  
+  e.g. in TvRecorder.C look for SETUP_DEBUG_ENV("RECORDER");
+  Debug in Telnet:
+  DebugPrintEdit RECORDER -C 10;
+  DebugPrintEdit TvToDoList -F 5;
+  Logurile scrise cu TmkLogger se gasesc in /var/log/tvlog si /var/log/tverr
+
+  Copy file from LeapFrog STB to local computer
+  1) mkdir -p /tmp/share && mount -t nfs -o rw 10.131.13.180:/home/agherca/sandbox/share /tmp/share
+  2) agherca@C22900022 ~/sandbox $ nc -l -p 1234 > File.Name
+  agherca@C22900022 ~/sandbox $ telnet 10.131.6.59
+  bash-3.2 # nc -w 3 10.131.13.180 1234 < File.Name
+
+LeapFrog Virgin Media (8th November 2017)
+  Copy a file through Telnet from LeapFrog box
+  consola calculator     nc -l -p 1234 > File.Name
+  consola calculator     telnet ip.box
+  consola telnet box     nc -w 3 ip.statie 1234 < File.Name
+  
+LeapFrog Virgin Media (13th November 2017)
+  SQLite3 through Telnet on Leapfrog:
+  telnet 10.131.6.59
+  cd /db && ls
+  sqlite3 RecordingDb.sqlite
+  .mode column
+  .headers on
+  .tables
+  PRAGMA table_info(recording);
+
+Build Harmony issues, fix (16th November 2017)
+  export TV_NAME_DB_URL=http://buildweb/name
+  cbe NO_TESTS=1 NO_AUDIT=1 make -j16
+
+Get specific build from US repository (17th November 2017)
+  export DIST_ROOT=/net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms
+  export RPMDIR=/net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms
+  export SETUP_BUILD=2017.xx.xx-xxxx
+  ..or..
+  d-alviso/odc_deployment/trec/transfers
+
+Mind queries by duration (23th November 2017)
+  Cristian Nantu:
+  https://splunkdev02.sj.tivo.com/en-US/app/engr_stb_diags/hydra_load_on_service?
+    form.timePicker.earliest=%40mon&form.timePicker.latest=now&form.tsnCategory=BO
+      DY%3D%22tsn%3A*%22
+
