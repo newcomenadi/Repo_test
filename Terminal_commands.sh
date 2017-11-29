@@ -11,10 +11,8 @@ cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 
 <<======================><======================>>UID<<======================><======================>>
 cbe make -j16 && cbe make linkroot && cbe make copyimage
-cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/tvsql
-cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/npk
-cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/pvr
-cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/tivoapp
+#TcdClient TVSQL build
+cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/tvsql && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #TcdClient NPK build
 cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/npk && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #TcdClient PVR build
