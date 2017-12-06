@@ -31,6 +31,7 @@ cbe make push-script>>push2tcdclient.sh
 subl push2tcdclient.sh
     export PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdclient-harmony
     export PUSH_TIVO_SYSTEM=dev-arm
+source push2tcdclient.sh
 cbe PUSH=1 NO_TESTS=1 NO_AUDIT=1 make
 
 <<======================><======================>>Bootstrapping-InitialSetup<<======================><======================>>
