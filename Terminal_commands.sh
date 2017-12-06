@@ -17,6 +17,8 @@ cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/tvsql && cbe make
 cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/npk && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #TcdClient PVR build
 cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/pvr && cbe make -j16 && cbe make linkroot && cbe make copyimage
+#TcdClient Media build
+cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/media && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #TcdClient TivoApp build
 cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/tivoapp && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #TcdClient full build
