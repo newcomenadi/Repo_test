@@ -247,9 +247,15 @@ Get specific build from US repository (17th November 2017)
   ..or..
   d-alviso/odc_deployment/trec/transfers
 
-Mind queries by duration (23th November 2017)
+Mind queries by duration (23rd November 2017)
   Cristian Nantu:
   https://splunkdev02.sj.tivo.com/en-US/app/engr_stb_diags/hydra_load_on_service?
     form.timePicker.earliest=%40mon&form.timePicker.latest=now&form.tsnCategory=BO
       DY%3D%22tsn%3A*%22
 
+Check Roots on USA build servers (6th December 2017)
+  Stefan Balmus:
+  cd .../b-tcdclient-harmony/srcroot && source SOURCEME.SH dev-arm
+  export DIST_ROOT=/net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms
+  export RPMDIR=/net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms
+  cbe make check-roots
