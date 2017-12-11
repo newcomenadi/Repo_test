@@ -259,3 +259,20 @@ Check Roots on USA build servers (6th December 2017)
   export DIST_ROOT=/net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms
   export RPMDIR=/net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms
   cbe make check-roots
+  
+  Tcdschema database workflow (8th December 2017)
+  Ca sa iei un anumit build pentru un subsitem folosesti:
+  export DIST_ROOT=/net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms
+  export RPMDIR=/net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms
+  export SETUP_BUILD=2017.xx.xx-xxxx
+  For push make from TcdSchema into TcdClient(Harmony):
+  cd .../tcdschema-mainline/srcroot/
+  source SOURCEME.SH dev-x86
+  cbe make push-script>>push2tcdclient.sh
+  subl push2tcdclient.sh
+      export PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdclient-harmony
+      export PUSH_TIVO_SYSTEM=dev-arm
+  source push2tcdclient.sh
+  cbe PUSH=0 NO_TESTS=1 NO_AUDIT=1 make
+  cbe PUSH=1 NO_TESTS=1 NO_AUDIT=1 make
+
