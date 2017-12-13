@@ -275,4 +275,18 @@ Check Roots on USA build servers (6th December 2017)
   source push2tcdclient.sh
   cbe PUSH=0 NO_TESTS=1 NO_AUDIT=1 make
   cbe PUSH=1 NO_TESTS=1 NO_AUDIT=1 make
-
+  
+  Use TvFeature (not the same as Feature Flag) to deactivate parts of your code (13th December 2017)
+    Create:
+      //d-alviso/tvfeatures/mainline/... //agherca-workspace2/b-tvfeatures-mainline/srcroot/...
+      srcroot/features/tcdclient/common/features/tcdclient/list.features
+    Use:
+      if(TmkFeatures::FEnabled(eTvFeatureUidForRecordings ) == true)
+      {
+          // your code here..
+      }
+      // in order to activate the code under TvFeature on your box update test.conf with 
+      export PREVIEW_FEATURES="439"
+  
+  
+  
