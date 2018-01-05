@@ -20,6 +20,6 @@ setenv -p STARTUP 'boot -tftp=10.131.13.180:Minos_gen12/zkernel.px2 nfsinit=10.1
 
 <<======================><======================>>dev-arm_server_Kernel_VirginMedia_LeapFrog<<======================><======================>>
 SSBL>auto
-setenv -p go "ifconfig eth0 -auto; sleep 100; boot -pkg xnfs12.trec.tivo.com:/dev-arm/Arr01/kernel/zkernel-harmony.pkg 'nfsinit=10.131.13.180:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root ip=dhcp BCC=production rw sysgen=false handcraft=false'"
+setenv -p go "ifconfig eth0 -auto; sleep 100; boot -pkg xnfs12.trec.tivo.com:/dev-arm/Arr01/kernel/zkernel-harmony.pkg 'nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root ip=dhcp BCC=production rw sysgen=false handcraft=false'"
 setenv -p STARTUP "$go"
-setenv -p STARTUP "ifconfig eth0 -auto; sleep 100; boot -pkg xnfs12.trec.tivo.com:/dev-arm/Arr01/kernel/zkernel-harmony.pkg 'nfsinit=10.131.13.180:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root ip=dhcp BCC=production rw'"
+setenv -p STARTUP "ifconfig eth0 -auto; sleep 100; boot -pkg xnfs12.trec.tivo.com:/dev-arm/Arr01/kernel/zkernel-harmony.pkg 'nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root ip=dhcp BCC=production rw'"
