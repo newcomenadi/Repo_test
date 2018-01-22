@@ -3,6 +3,7 @@ setenv -p bd "memload boot cm; sleep 1500; memload kernel; bootram -samelf -load
 setenv -p STARTUP "$bn"
 printenv
 unsetenv STARTUP
+cp -rv ~/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root/platform/Gen12/kernel/zkernel.px2 /tftpboot/Minos_gen12
 
 <<======================><======================>>release-mips_server_Kernel<<======================><======================>>
 setenv -p bn "memload boot cm; ifconfig -auto eth0; boot -loader=px xnfs14.tivo.com:/tftpboot/vmlinux-ch.px 'nfsinit=10.131.5.52:/home/adrian/sandbox/agherca-workspace2/b-tcdclient-harmony/release-mips/tivo_root'"
