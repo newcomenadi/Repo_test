@@ -4,6 +4,7 @@ sudo vi /etc/sudoers (sudo visudo (checks the file syntax)) - ctrl+o, Enter, ctr
 uname -r (linux kernel)
 uname -m (processor type)
 uname -a
+ps ax | grep cinnamon; kill PID
 
 <<======================><======================>>Hydra<<======================><======================>>
 cbe NO_TESTS=1 NO_AUDIT=1 NO_ENCORE=1 make
