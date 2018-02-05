@@ -12,6 +12,8 @@ cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 
 <<======================><======================>>UID<<======================><======================>>
 cbe make -j16 && cbe make linkroot && cbe make copyimage
+#TcdClient Atlas build
+cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/atlas && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #TcdClient TVSQL build
 cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/tvsql && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #TcdClient NPK build
