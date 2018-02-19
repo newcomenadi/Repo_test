@@ -200,22 +200,22 @@ cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 
 (#bashrc/bash_aliases)
 subl ~/.bash_aliases
-alias c='echo -e "\033[36mclear\n\033[0m" && \
-		 clear'
-alias bashrc='echo -e "\033[36msubl ~/.bashrc\n\033[0m" && \
-		 subl ~/.bashrc'
-alias bash_aliases='echo -e "\033[36msubl ~/.bash_aliases\n\033[0m" && \
-		 subl ~/.bash_aliases'
-alias ij='srchost && \
-		  echo -e "\033[36m\ncbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh & > /dev/null\n\033[0m" && \
-		  cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh & > /dev/null'
-alias srchost='echo -e "\033[36mcd ~/sandbox/agherca-workspace2/b-tcdui-mainline/srcroot/ && source SOURCEME.SH dev-host\n\033[0m" && \
-			   cd ~/sandbox/agherca-workspace2/b-tcdui-mainline/srcroot/ && source SOURCEME.SH dev-host'
-alias srctcd='echo -e "\033[36mcd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/ && source SOURCEME.SH dev-arm\n\033[0m" && \
-			  cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/ && source SOURCEME.SH dev-arm'
-alias makehost='echo -e "\033[36mcd ~/sandbox/agherca-workspace2/b-tcdui-mainline/srcroot/ && cbe NO_AUDIT=1 NO_TESTS=1 NO_ENCORE=1 make\n\033[0m" && \
-				cd ~/sandbox/agherca-workspace2/b-tcdui-mainline/srcroot/ && cbe NO_AUDIT=1 NO_TESTS=1 NO_ENCORE=1 make'
-alias setuproots='echo -e "\033[36mcbe make setup-roots\n\033[0m" && \
-				  cbe make setup-roots'
+	alias c='echo -e "\033[36mclear\n\033[0m" && \
+			 clear'
+	alias bashrc='echo -e "\033[36msubl ~/.bashrc\n\033[0m" && \
+			 subl ~/.bashrc'
+	alias bash_aliases='echo -e "\033[36msubl ~/.bash_aliases\n\033[0m" && \
+			 subl ~/.bash_aliases'
+	alias ij='srchost && \
+			  echo -e "\033[36m\ncbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh & > /dev/null\n\033[0m" && \
+			  cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh & > /dev/null'
+	alias srchost='echo -e "\033[36mcd ~/sandbox/agherca-workspace2/b-tcdui-mainline/srcroot/ && source SOURCEME.SH dev-host\n\033[0m" && \
+				   cd ~/sandbox/agherca-workspace2/b-tcdui-mainline/srcroot/ && source SOURCEME.SH dev-host'
+	alias srctcd='echo -e "\033[36mcd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/ && source SOURCEME.SH dev-arm\n\033[0m" && \
+				  cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/ && source SOURCEME.SH dev-arm'
+	alias makehost='echo -e "\033[36mcd ~/sandbox/agherca-workspace2/b-tcdui-mainline/srcroot/ && cbe NO_AUDIT=1 NO_TESTS=1 NO_ENCORE=1 make\n\033[0m" && \
+					cd ~/sandbox/agherca-workspace2/b-tcdui-mainline/srcroot/ && cbe NO_AUDIT=1 NO_TESTS=1 NO_ENCORE=1 make'
+	alias setuproots='echo -e "\033[36mcbe make setup-roots\n\033[0m" && \
+					  cbe make setup-roots'
 
 
