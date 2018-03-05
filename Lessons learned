@@ -293,3 +293,10 @@ Check Roots on USA build servers (6th December 2017)
     export RPMDIR=/net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms
     cbe make check-roots
     
+Unit Tests Harmony (5th March 2018)
+    cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/ && source SOURCEME.SH dev-x86
+    cd ./sw/media/common/test/videomgr
+    cbe make clobber
+    cbe make TvTestTunerClient
+    ./TvTestClientPlaybackController
+    
