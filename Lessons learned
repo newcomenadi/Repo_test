@@ -300,3 +300,9 @@ Unit Tests Harmony (5th March 2018)
     cbe make TvTestTunerClient
     ./TvTestClientPlaybackController
     
+TiVo box feature check (8th March 2018)
+    Ovidiu Hrituleac:
+    telnet 10.131.6.101
+    tvfeature -p 103 -> check if feature is enabled
+  
+
