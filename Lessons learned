@@ -213,6 +213,8 @@ LeapFrog Virgin Media (25th-31st October 2017)
   DebugPrintEdit RECORDER -C 10;
   DebugPrintEdit TvToDoList -F 5;
   Logurile scrise cu TmkLogger se gasesc in /var/log/tvlog si /var/log/tverr
+  Pentru varianta loguriloe scrise in fisier pentru a fi mai usor de urmarit foloseste:
+      tail -f -n23 /var/log/tvlog | grep -i ADGH
 
   Copy file from LeapFrog STB to local computer
   1) mkdir -p /tmp/share && mount -t nfs -o rw 10.131.13.180:/home/agherca/sandbox/share /tmp/share
