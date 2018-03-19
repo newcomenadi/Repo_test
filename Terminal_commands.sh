@@ -22,7 +22,7 @@ cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/npk && cbe make -
 cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/pvr && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #TcdClient Media build
 cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/media && cbe make -j16 && cbe make linkroot && cbe make copyimage
-#TcdClient TivoApp build
+#TcdClient TivoApp build (always build this after one of the above!!)
 cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/tivoapp && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #TcdClient full build
 cbe NO_TESTS=1 NO_AUDIT=1 make -j16 && cbe make unsymlink && cbe make strip && cbe make xnfsimage && cbe make monolithic
