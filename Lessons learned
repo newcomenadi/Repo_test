@@ -307,4 +307,12 @@ TiVo box feature check (8th March 2018)
     telnet 10.131.6.101
     tvfeature -p 103 -> check if feature is enabled
   
-
+TiVo Unit Tests Bom not found compile error (29th March 2018)
+    sw/media/common/test $ cbe make
+        Creating linkinfo file for TunerPlaybackService-static.linkinfo
+          /bin/sh: line 12: /home/nnistor/sandbox/nnistor-workspace/b-tcdclient-harmony/dev-x86/objroot/sw/media/boms/TunerPlaybackService-static_linkinfo.bom: No such file or directory
+          touch: cannot touch `/home/nnistor/sandbox/nnistor-workspace/b-tcdclient-harmony/dev-x86/objroot/sw/media/boms/.TunerPlaybackService-static_linkinfo.bomstamp': No such file or directory
+    solution:
+    sw/media $ cbe make
+    
+    
