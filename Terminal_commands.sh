@@ -10,22 +10,24 @@ ps ax | grep cinnamon; kill PID
 cbe NO_TESTS=1 NO_AUDIT=1 NO_ENCORE=1 make
 cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 
-<<======================><======================>>UID<<======================><======================>>
-cbe make -j16 && cbe make linkroot && cbe make copyimage
-#TcdClient Atlas build
-cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/atlas/video && cbe make -j16 && cbe make linkroot && cbe make copyimage
-#TcdClient TVSQL build
-cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/tvsql && cbe make -j16 && cbe make linkroot && cbe make copyimage
-#TcdClient NPK build
-cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/npk && cbe make -j16 && cbe make linkroot && cbe make copyimage
-#TcdClient PVR build
-cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/pvr && cbe make -j16 && cbe make linkroot && cbe make copyimage
-#TcdClient Media build
-cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/media && cbe make -j16 && cbe make linkroot && cbe make copyimage
-#TcdClient TivoApp build (always build this after one of the above!!)
-cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/sw/tivoapp && cbe make -j16 && cbe make linkroot && cbe make copyimage
+<<======================><======================>>Build/Compile(UID)<<======================><======================>>
+#prerequisites
+export SRCROOT=~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot
 #TcdClient full build
-cbe NO_TESTS=1 NO_AUDIT=1 make -j16 && cbe make unsymlink && cbe make strip && cbe make xnfsimage && cbe make monolithic
+cd $SRCROOT && cbe NO_TESTS=1 NO_AUDIT=1 make -j16 && cbe make unsymlink && cbe make strip && cbe make xnfsimage && cbe make monolithic
+
+#TcdClient Atlas build
+cd $SRCROOT/atlas/video && cbe make -j16 && cbe make linkroot && cbe make copyimage
+#TcdClient TVSQL build
+cd $SRCROOT/sw/tvsql && cbe make -j16 && cbe make linkroot && cbe make copyimage
+#TcdClient NPK build
+cd $SRCROOT/sw/npk && cbe make -j16 && cbe make linkroot && cbe make copyimage
+#TcdClient PVR build
+cd $SRCROOT/sw/pvr && cbe make -j16 && cbe make linkroot && cbe make copyimage
+#TcdClient Media build
+cd $SRCROOT/sw/media && cbe make -j16 && cbe make linkroot && cbe make copyimage
+#*TcdClient TivoApp build (always build this after one of the above!!)
+cd $SRCROOT/sw/tivoapp && cbe make -j16 && cbe make linkroot && cbe make copyimage
 
 <<======================><======================>>Push TcdSchema to TcdClient<<======================><======================>>
 cd ~/.../b-tcdschema-mainline/srcroot/
