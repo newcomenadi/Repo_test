@@ -1,5 +1,10 @@
 (#Linux Mint 18 Sarah)
 
+(#Workstation environment & ergonomics)
+# right click on the lower-right corner (clock on the screen bar)
+# Configure... -> Check "Use a custom data format" -> Date format: %a %e %b %l:%M:%S
+# Click on "Show information on date format syntax" to open website.
+
 sudo apt-get install sublime-text && \
 sudo apt-get install gedit && \
 sudo apt-get install tcl && \
