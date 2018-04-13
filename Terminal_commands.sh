@@ -31,6 +31,7 @@ cd $SRCROOT/sw/tivoapp && cbe make -j16 && cbe make linkroot && cbe make copyima
 
 <<======================><======================>>Compile & run Unit Tests<<======================><======================>>
 cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/ && source SOURCEME.SH dev-x86
+cd $SRCROOT/sw/media && cbe make -j16 && cbe make linkroot && cbe make copyimage
 cd $SRCROOT/sw/media/common/test/videomgr && cbe make -j8 && ./TvTestCakFingerprintManager
 
 <<======================><======================>>Push TcdSchema to TcdClient<<======================><======================>>
