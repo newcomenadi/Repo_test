@@ -190,7 +190,8 @@ cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 #		(e.g.  	in TvLiveCacheAction.C -> #include <appact/TvAppActClient.h>; 
 #			in QtPrj_TiVo.includes -> exists sw/spigot/common/include/appact
 #	 		in QtPrj_TiVo.includes -> add sw/spigot/common/include)
-#In QtPrj_Name.icludes add:  /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/root/include
+#	At the end of this file: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/QtPrj_TiVo.includes
+#		Add this line: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-x86/root/include
 #When starting Qt Creator (Community) open the project using:
 	#~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/QtPrj_Name.creator
 #QtPrj_Name.pro  is not used and can be removed
