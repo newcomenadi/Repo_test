@@ -173,7 +173,7 @@ cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 #File -> New File or Project...
 #	->Projects -> Import Project -> Import Existing Project -> Choose...
 #	->Project name: QtPrj_TiVo
-#	->Location: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot -> Next>
+#	->Location: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot -> Next ->
 #	->Show files matching: *.cc; *.cpp; *.cp; *.cxx; *.c++; *.h; *.hh; *.hpp; *.hxx;*.cydoc;*.xml;*.schema;*.C;*.contract;*.cyimp;*.idl;Makefile;ismdefs;ismrules;*.py;*.c
 #	->Hide files matching: 
 #	->Apply Filter -> <Back -> Next> (Needed for refreshing the filter!) -> Next
