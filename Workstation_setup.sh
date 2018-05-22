@@ -186,12 +186,12 @@ cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 #		->Apply ->OK
 #	->Finish
 #Resolve includes in QtPrj_Name.includes like this:
-#	Add modified lines with ISM_Name after the last slash removed
+#	Important!! At the end of this file: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/QtPrj_TiVo.includes
+#		Add this line: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-x86/root/include
+#	Not so important. Add modified lines with ISM_Name after the last slash removed
 #		(e.g.  	in TvLiveCacheAction.C -> #include <appact/TvAppActClient.h>; 
 #			in QtPrj_TiVo.includes -> exists sw/spigot/common/include/appact
 #	 		in QtPrj_TiVo.includes -> add sw/spigot/common/include)
-#	At the end of this file: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/QtPrj_TiVo.includes
-#		Add this line: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-x86/root/include
 #When starting Qt Creator (Community) open the project using:
 	#~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/QtPrj_Name.creator
 #QtPrj_Name.pro  is not used and can be removed
