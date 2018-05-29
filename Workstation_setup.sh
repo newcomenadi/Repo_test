@@ -187,7 +187,7 @@ cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 #	->Finish
 #Resolve includes in QtPrj_Name.includes like this:
 #	Important!! At the end of this file: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/QtPrj_TiVo.includes
-#		Add this line: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-x86/root/include
+#		Add this line: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/root/include
 #	Not so important. Add modified lines with ISM_Name after the last slash removed
 #		(e.g.  	in TvLiveCacheAction.C -> #include <appact/TvAppActClient.h>; 
 #			in QtPrj_TiVo.includes -> exists sw/spigot/common/include/appact
