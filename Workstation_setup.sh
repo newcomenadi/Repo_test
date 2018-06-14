@@ -121,13 +121,12 @@ cd ~/sandbox/agherca-workspace2/b-clientcore-mainline/srcroot
 source SOURCEME.SH dev-host
 cbe make setup-roots
 cbe NO_TESTS=1 make
-source SETUPPUSH.SH -m ~/sandbox/agherca-workspace2/b-tcdui-mainline
 #bash_tcdui
 cd ~/sandbox/agherca-workspace2/b-tcdui-mainline/srcroot
 source SOURCEME.SH dev-host
 cbe make setup-roots
 #bash_clientcore
-source SOURCEPUSH.SH
+source SETUPPUSH.SH -m ~/sandbox/agherca-workspace2/b-tcdui-mainline
 ls -ld "$PUSH_ROOT" "$PUSH_TOOLROOT" "$PUSH_TIVO_ROOT" "$PUSH_TGT"
 cbe PUSH=1 NO_TESTS=1 make
 #bash_tcdui
