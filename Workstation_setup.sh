@@ -135,6 +135,7 @@ rm -rf $SRCROOT/../$TIVO_SYSTEM/idea
 cbe UpdateClient.py -s b-clientcore-mainline
 
 #Download latest IntelliJ IDEA Ultimate edition from here:
+#	https://www.jetbrains.com/idea/download/#section=linux
 sudo mkdir /home/agherca/sandbox/ijidea && sudo chmod -R 777 /home/agherca/sandbox/ijidea && sudo chown -R nobody /home/agherca/sandbox/ijidea
 cd /home/agherca/sandbox/ijidea
 cp -Rip /home/agherca/Downloads/ideaIU-2017.x.x.tar.gz /home/agherca/sandbox/ijidea
