@@ -142,6 +142,8 @@ cp -Rip /home/agherca/Downloads/ideaIU-2018.x.x.tar.gz /home/agherca/sandbox/iji
 tar -xzf ideaIU-2018.x.x.tar.gz
 ln -s ./idea-IU-xxx.xxxx.xx ./2018.x.xx
 cbe ~/sandbox/ijidea/2018.x.xx/bin/idea.sh &>/dev/null &
+#Intellij IDEA License Activation
+#	http://sjat03.tivo.com:8080/
 #Open Project -> /home/agherca/sandbox/agherca-workspace2/b-tcdui-mainline/dev-host/idea/workspace2_tcdui_mainline_dev-host/workspace2_tcdui_mainline_dev-host.ipr
 #File -> Settings... -> Plugins -> Install plugin from disk -> /home/agherca/AdGh/Kits/IntelliJ_IDEA/intellij-haxe-17.jar -> OK -> Apply -> OK -> Restart Intellij IDEA
 #File -> Project Structure... -> SDKs ->
