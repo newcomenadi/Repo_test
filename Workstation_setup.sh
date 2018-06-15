@@ -142,32 +142,36 @@ cp -Rip /home/agherca/Downloads/ideaIU-2018.x.x.tar.gz /home/agherca/sandbox/iji
 tar -xzf ideaIU-2018.x.x.tar.gz
 ln -s ./idea-IU-xxx.xxxx.xx ./2018.x.xx
 cbe ~/sandbox/ijidea/2018.x.xx/bin/idea.sh &>/dev/null &
-#Intellij IDEA License Activation
-#	http://sjat03.tivo.com:8080/
+#Intellij IDEA License Activation -> http://sjat03.tivo.com:8080/
 #Open (Project) -> /home/agherca/sandbox/agherca-workspace2/b-tcdui-mainline/dev-host/idea/workspace2_tcdui_mainline_dev-host/workspace2_tcdui_mainline_dev-host.ipr
 #File -> Settings... -> Plugins -> Install plugin from disk -> /home/agherca/AdGh/Kits/IntelliJ_IDEA/intellij-haxe-17.jar -> OK -> Apply -> OK -> Restart Intellij IDEA
 #File -> Project Structure... -> SDKs ->
+#	-> Click on the green + button -> Add New SDK -> Haxe toolkit
+#		-> /home/agherca/sandbox/agherca-workspace2/b-tcdui-mainline/dev-host/toolroot/bin
 #	-> Name: -> workspace2_tcdui_mainline_release-host_haxe3.3_sdk
 #	-> Haxe toolkit home path: -> /home/agherca/sandbox/agherca-workspace2/b-tcdui-mainline/dev-host/toolroot/bin
 #	-> Neko executable: -> /usr/bin/neko
 #	-> Haxelib executable: -> /home/agherca/sandbox/agherca-workspace2/b-tcdui-mainline/dev-host/toolroot/bin/haxelib
 #	-> Classpath -> /home/agherca/sandbox/agherca-workspace2/b-tcdui-mainline/dev-host/root/haxe/std
 #	-> Sourcepath -> /home/agherca/sandbox/agherca-workspace2/b-tcdui-mainline/dev-host/root/haxe/std
+#	-> Apply -> OK
 #File -> Project Structure... -> Project -> Project SDK: -> workspace2_tcdui_mainline_release-host_haxe3.3_sdk (3.3.0)
 
 #Additional Settings for a comfortable experience
-#Editor -> General -> Editors Tabs  [uncheck]Show tabs in single row | Tab limit -> 23
-#Appearance Theme -> Darcula
-#Flex Compiler heap size 4096 (not needed for newer versions of Idea Intellij)
-#Key shortcuts:
-#	Undo Ctrl + Z
-#	Redo Ctrl + Y
-#	Back -> Alt + LeftArrow
-#	Forward -> Alt + RightArrow
-#	Reopen Closed Tab -> Ctrl + Shift + T
-#	Previous Tab -> Ctrl + Alt + LeftArrow
-#	Next Tab -> Ctrl + Alt + RightArrow
-#[uncheck]Automatically check for updates
+#File -> Settings... -> Editor -> General -> Editors Tabs  
+#						-> [uncheck]Show tabs in single row
+#						-> Tab limit -> 23
+#	-> Appearance & Beahavior -> Appearance -> Theme -> Darcula
+#	-> Flex Compiler heap size 4096 (not needed for newer versions of Idea Intellij)
+#	-> Keymap:
+#		Undo Ctrl + Z
+#		Redo Ctrl + Y
+#		Back -> Alt + LeftArrow
+#		Forward -> Alt + RightArrow
+#		Reopen Closed Tab -> Ctrl + Shift + T
+#		Previous Tab -> Ctrl + Alt + LeftArrow
+#		Next Tab -> Ctrl + Alt + RightArrow
+#	-> [uncheck]Automatically check for updates
 
 (#Qt Creator)
 #In order to have a kit,  install Qt 5.9.2 or another one beside the standard package.
