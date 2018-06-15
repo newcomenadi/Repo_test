@@ -138,7 +138,7 @@ cbe UpdateClient.py -s b-clientcore-mainline
 #	https://www.jetbrains.com/idea/download/#section=linux
 sudo mkdir /home/agherca/sandbox/ijidea && sudo chmod -R 777 /home/agherca/sandbox/ijidea && sudo chown -R nobody /home/agherca/sandbox/ijidea
 cd /home/agherca/sandbox/ijidea
-cp -Rip /home/agherca/Downloads/ideaIU-2017.x.x.tar.gz /home/agherca/sandbox/ijidea
+cp -Rip /home/agherca/Downloads/ideaIU-2018.x.x.tar.gz /home/agherca/sandbox/ijidea
 tar -xzf ideaIU-2018.x.x.tar.gz
 ln -s ./idea-IU-xxx.xxxx.xx ./2018.x.xx
 cbe ~/sandbox/ijidea/2018.x.xx/bin/idea.sh &>/dev/null &
