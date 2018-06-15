@@ -144,7 +144,7 @@ ln -s ./idea-IU-xxx.xxxx.xx ./2018.x.xx
 cbe ~/sandbox/ijidea/2018.x.xx/bin/idea.sh &>/dev/null &
 #Intellij IDEA License Activation
 #	http://sjat03.tivo.com:8080/
-#Open Project -> /home/agherca/sandbox/agherca-workspace2/b-tcdui-mainline/dev-host/idea/workspace2_tcdui_mainline_dev-host/workspace2_tcdui_mainline_dev-host.ipr
+#Open (Project) -> /home/agherca/sandbox/agherca-workspace2/b-tcdui-mainline/dev-host/idea/workspace2_tcdui_mainline_dev-host/workspace2_tcdui_mainline_dev-host.ipr
 #File -> Settings... -> Plugins -> Install plugin from disk -> /home/agherca/AdGh/Kits/IntelliJ_IDEA/intellij-haxe-17.jar -> OK -> Apply -> OK -> Restart Intellij IDEA
 #File -> Project Structure... -> SDKs ->
 #	-> Name: -> workspace2_tcdui_mainline_release-host_haxe3.3_sdk
