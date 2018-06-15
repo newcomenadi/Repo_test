@@ -158,13 +158,13 @@ cbe ~/sandbox/ijidea/2018.x.xx/bin/idea.sh &>/dev/null &
 #Appearance Theme -> Darcula
 #Flex Compiler heap size 4096 (not needed for newer versions of Idea Intellij)
 #Key shortcuts:
-	#Undo Ctrl + Z
-	#Redo Ctrl + Y
-	#Back -> Alt + LeftArrow
-	#Forward -> Alt + RightArrow
-	#Reopen Closed Tab -> Ctrl + Shift + T
-	#Previous Tab -> Ctrl + Alt + LeftArrow
-	#Next Tab -> Ctrl + Alt + RightArrow
+#	Undo Ctrl + Z
+#	Redo Ctrl + Y
+#	Back -> Alt + LeftArrow
+#	Forward -> Alt + RightArrow
+#	Reopen Closed Tab -> Ctrl + Shift + T
+#	Previous Tab -> Ctrl + Alt + LeftArrow
+#	Next Tab -> Ctrl + Alt + RightArrow
 #[uncheck]Automatically check for updates
 
 (#Qt Creator)
