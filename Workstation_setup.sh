@@ -172,6 +172,13 @@ cbe ~/sandbox/ijidea/2018.x.xx/bin/idea.sh &>/dev/null &
 #		Previous Tab -> Ctrl + Alt + LeftArrow
 #		Next Tab -> Ctrl + Alt + RightArrow
 #	-> [uncheck]Automatically check for updates
+#File -> Settings... -> Version Control
+#	-> Use connection parameters:
+#	-> Port: perforce.trec.tivo.com:1666
+#	-> Client: agherca-workspace2
+#	-> User: agherca
+#	-> Test Connection -> Connection successful -> OK
+#	-> Apply -> OK
 
 (#Qt Creator)
 #In order to have a kit,  install Qt 5.9.2 or another one beside the standard package.
