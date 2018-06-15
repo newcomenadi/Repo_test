@@ -315,4 +315,6 @@ TiVo Unit Tests Bom not found compile error (29th March 2018)
     solution:
     sw/media $ cbe make
     
-    
+Find boxes by TSN (15th June 2018)
+  Ilie Halip
+  scanezi reteaua, te conectezi prin telnet la fiecare IP care are portul 23 deschis, si executi `echo $SerialNumber` pana cand dai de TSN
