@@ -45,7 +45,7 @@ source push2tcdclient.sh
 cbe PUSH=1 NO_TESTS=1 NO_AUDIT=1 make
 
 <<======================><======================>>Bootstrapping-InitialSetup<<======================><======================>>
-cbe make setup-roots && cbe make unsymlink && cbe make strip && cbe make xnfsimage && cbe make monolithic
+cbe make clobber && cbe make setup-roots && cbe make unsymlink && cbe make strip && cbe make xnfsimage && cbe make monolithic
 
 
 <<======================><======================>>ComHem-Kernel<<======================><======================>>
