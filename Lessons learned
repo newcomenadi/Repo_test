@@ -318,3 +318,11 @@ TiVo Unit Tests Bom not found compile error (29th March 2018)
 Find boxes by TSN (15th June 2018)
   Ilie Halip
   scanezi reteaua, te conectezi prin telnet la fiecare IP care are portul 23 deschis, si executi `echo $SerialNumber` pana cand dai de TSN
+
+Feature flags paths (26th June 2018)
+  Permanent feature activation:
+    /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/tools/tcdclient/common/features/tcdclient/graph.features
+  Previewsets:
+    /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/tools/tcdclient/common/features/tcdclient/previewset.info
+  Tvfeatures:
+    /home/agherca/sandbox/agherca-workspace2/b-tvfeatures-mainline/srcroot/features/tcdclient/common/features/tcdclient/list.features
