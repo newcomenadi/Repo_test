@@ -326,3 +326,9 @@ Feature flags paths (26th June 2018)
     /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/tools/tcdclient/common/features/tcdclient/previewset.info
   Tvfeatures:
     /home/agherca/sandbox/agherca-workspace2/b-tvfeatures-mainline/srcroot/features/tcdclient/common/features/tcdclient/list.features
+    
+Kernel Logs InfoPrint (27th June 2018)
+  Usually InfoPrint logs, used in separate applications like dvbappc (from feature UID CAK Fingerprint), can only be accessed through backhaul on TiVo service portal
+  Stefan Balmus:
+  InfoPrint can also be found through Telnet directly on the box in: /var/log/kernel
+  
