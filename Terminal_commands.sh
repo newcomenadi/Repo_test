@@ -27,6 +27,10 @@ cd $SRCROOT/sw/npk && cbe make -j16 && cbe make linkroot && cbe make copyimage
 cd $SRCROOT/sw/pvr && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #TcdClient Media build
 cd $SRCROOT/sw/media && cbe make -j16 && cbe make linkroot && cbe make copyimage
+#TcdClient StanbbyHost build
+cd $SRCROOT/standby/standbyhost/ && cbe make -j16 && cbe make linkroot && cbe make copyimage
+#TcdClient Aes build
+cd $SRCROOT/triotcd/aes/ && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #*TcdClient TivoApp build (always build this after one of the above!!)
 cd $SRCROOT/sw/tivoapp && cbe make -j16 && cbe make linkroot && cbe make copyimage
 
