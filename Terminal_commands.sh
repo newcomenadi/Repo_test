@@ -31,7 +31,11 @@ cd $SRCROOT/sw/media && cbe make -j16 && cbe make linkroot && cbe make copyimage
 cd $SRCROOT/standby/standbyhost/ && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #TcdClient Aes build
 cd $SRCROOT/triotcd/aes/ && cbe make -j16 && cbe make linkroot && cbe make copyimage
-#*TcdClient TivoApp build (always build this after one of the above!!)
+#TcdClient Voice build
+cd $SRCROOT/sw/voice/ && cbe make -j16 && cbe make linkroot && cbe make copyimage
+#TcdClient DIAL build
+cd $SRCROOT/sw/dial/ && cbe make -j16 && cbe make linkroot && cbe make copyimage
+#*TcdClient TivoApp build (*always build this after one of the above!!)
 cd $SRCROOT/sw/tivoapp && cbe make -j16 && cbe make linkroot && cbe make copyimage
 
 <<======================><======================>>Compile & run Unit Tests<<======================><======================>>
