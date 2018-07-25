@@ -337,4 +337,22 @@ Remote control pairing (4th July 2018)
   MENU > HELP > TIPS & TROUBLESHOOTING > REMOTE CONTROL > PRESS ENTER
   (https://support.tivo.com/articles/Features_Use/TiVo-Remotes-RF-Pairing-Instructions)
   
+  Google Assitant on Linux, script (25th July 2018)
+  Stefan Balmus
+  sudo apt-get install python3-pip
+  sudo apt-get install python3-setuptools
+  python3 -m pip install wheel
+  python3 -m pip install google-assistant-sdk[samples]
+  python3 -m pip install --upgrade google-auth-oauthlib[tool]
+  cd ~/.local/lib/python3.5/site-packages/google_auth_oauthlib/tool
+  {"installed":{"client_id":"178674979440-m01cra601o8v4u6oefq8tn2l26f14cqp.apps.googleusercontent.com","project_id":"calm-aegis-211212","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://accounts.google.com/o/oauth2/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"meLceXpAdvgU9vByT7NlOCa5","redirect_uris":["urn:ietf:wg:oauth:2.0:oob","http://localhost"]}}
+  python3 __main__.py --client-secrets /home/agherca/AdGh/Google_Assistant/client_secret_178674979440-m01cra601o8v4u6oefq8tn2l26f14cqp.apps.googleusercontent.com.json --scope https://www.googleapis.com/auth/assistant-sdk-prototype --save --headless
+  treckobayashi@gmail.com
+  bestkobainiasi
+  4/AABpYVZoxt4-64AlFgA75OxPHqoGEetW7ZBeGvmvXInkVKuzE6gNThs
+  cd ~/.local/lib/python3.5/site-packages/googlesamples/assistant/grpc
+  python3 pushtotalk.py --device-id KobaGoogleAssistant --device-model-id calm-aegis-211212
+  
+  
+  
   
