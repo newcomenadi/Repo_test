@@ -7,13 +7,16 @@ uname -a
 ps ax | grep cinnamon; kill PID
 netstat (network statistics)
 
+
 <<======================><======================>>Hydra<<======================><======================>>
 cbe NO_TESTS=1 NO_AUDIT=1 NO_ENCORE=1 make
 cbe ~/sandbox/ijidea/2017.8.24/bin/idea.sh &>/dev/null &
 
+
 <<======================><======================>>Build/Compile(UID)<<======================><======================>>
 #prerequisites
 export SRCROOT=~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot
+
 #TcdClient full build
 cd $SRCROOT && cbe NO_TESTS=1 NO_AUDIT=1 make -j16 && cbe make unsymlink && cbe make strip && cbe make xnfsimage && cbe make monolithic
 
@@ -38,10 +41,15 @@ cd $SRCROOT/sw/dial/ && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #*TcdClient TivoApp build (*always build this after one of the above!!)
 cd $SRCROOT/sw/tivoapp && cbe make -j16 && cbe make linkroot && cbe make copyimage
 
+<<======================><======================>>Bootstrapping-InitialSetup<<======================><======================>>
+cbe make clobber && cbe make setup-roots && cbe make unsymlink && cbe make strip && cbe make xnfsimage && cbe make monolithic
+
+
 <<======================><======================>>Compile & run Unit Tests<<======================><======================>>
 cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/ && source SOURCEME.SH dev-x86
 cd $SRCROOT/sw/media && cbe make -j16 && cbe make linkroot && cbe make copyimage
 cd $SRCROOT/sw/media/common/test/videomgr && cbe make -j8 && ./TvTestCakFingerprintManager
+
 
 <<======================><======================>>Push TcdSchema to TcdClient<<======================><======================>>
 cd ~/.../b-tcdschema-mainline/srcroot/
@@ -53,13 +61,11 @@ subl push2tcdclient.sh
 source push2tcdclient.sh
 cbe PUSH=1 NO_TESTS=1 NO_AUDIT=1 make
 
-<<======================><======================>>Bootstrapping-InitialSetup<<======================><======================>>
-cbe make clobber && cbe make setup-roots && cbe make unsymlink && cbe make strip && cbe make xnfsimage && cbe make monolithic
-
 
 <<======================><======================>>ComHem-Kernel<<======================><======================>>
 mkdir /tftpboot/ComHem && sudo chmod -R 777 /tftpboot/ComHem && sudo chown -R nobody /tftpboot/ComHem
 cp -Rip ~/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-mips/tivo_root/platform/Sam02/kernel/vmlinux.px /tftpboot/ComHem/
+
 
 <<======================><======================>>Minos-Kernel<<======================><======================>>
 mkdir /tftpboot/Minos_gen12 && sudo chmod -R 777 /tftpboot/Minos_gen12 && sudo chown -R nobody /tftpboot/Minos_gen12
