@@ -337,7 +337,7 @@ Remote control pairing (4th July 2018)
   MENU > HELP > TIPS & TROUBLESHOOTING > REMOTE CONTROL > PRESS ENTER
   (https://support.tivo.com/articles/Features_Use/TiVo-Remotes-RF-Pairing-Instructions)
   
-  Google Assitant on Linux, script (25th July 2018)
+Google Assitant on Linux, script (25th July 2018)
   Stefan Balmus
   sudo apt-get install python3-pip
   sudo apt-get install python3-setuptools
