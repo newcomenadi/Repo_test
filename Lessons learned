@@ -369,4 +369,13 @@ Google Assitant on Linux, script (25th July 2018)
     ... Get pairing code from the TiVo box by lauching the Application "WORKS WITH alexa",
     Stb should have these flags in Production enviroment: DG_alexa , DC_Standard
     
-  
+  Open a Shell to a box by knowing it's TSN (8th August 2018)
+    Stefan Balmus
+    Open FindMyTcD http://bcadmin/findMyTCD.php and enter the box' TSN and click Find
+    note the displayed server IP
+    Go in tcdclient-harmony and source SOURCEME.sh ..etc. etc.
+    then go to: $TIVO_SYSTEM/root/tvbin/
+    export PYTHONPATH=$ROOT/tvlib/python
+    ./lmshell.py <server IP> 2193 tsn:<TSN>  
+
+
