@@ -353,6 +353,8 @@ Google Assitant on Linux, script (25th July 2018)
   cd ~/.local/lib/python3.5/site-packages/googlesamples/assistant/grpc
   python3 pushtotalk.py --device-id KobaGoogleAssistant --device-model-id calm-aegis-211212
   
-  
+  IFTTT link for pairing STB with IFTTT account through TiVo staging
+    Anca Ciridariu
+    https://ifttt.com/features/redeem?code=17167-14f492eac6eb256be767de38e82fffce
   
   
