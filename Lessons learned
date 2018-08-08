@@ -353,14 +353,15 @@ Google Assitant on Linux, script (25th July 2018)
   cd ~/.local/lib/python3.5/site-packages/googlesamples/assistant/grpc
   python3 pushtotalk.py --device-id KobaGoogleAssistant --device-model-id calm-aegis-211212
   
-  Pair IFTTT account with TiVo box
+  Pair IFTTT account with TiVo box (8th August 2018)
     Anca Ciridariu & Stefan Balmus
     Stb should have these flags in Staging enviroment: DG_ifttt , DC_Staging 
-    go to IFTTT TiVo staging: https://ifttt.com/features/redeem?code=17167-14f492eac6eb256be767de38e82fffce
+    go to IFTTT TiVo staging: https://ifttt.com/features/redeem?code=17167-14f492eac6eb256be767de38e82fffce ->
     -> My Applets -> Services -> TiVo Staging -> Settings -> Edit connection -> Enter the activation code
     The activation code is generated with the IFTTT app lauched from the TiVo box.
     
-  Pair Leo Mini with Minos Bolt
-    The two boxes must be in the same environment (Staging), in the same ethernet network and under the same TiVo owner/user (the user can also be found and modified as a flag in TCD Tracker: SG_0026125897).
+  Pair Leo Mini with Minos Bolt (8th August 2018)
+    The two boxes must be in the same environment (Staging), in the same ethernet network and under the same TiVo owner/user
+    (the user can also be found and modified as a flag in TCD Tracker: SG_0026125897).
     
   
