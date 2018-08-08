@@ -364,4 +364,9 @@ Google Assitant on Linux, script (25th July 2018)
     The two boxes must be in the same environment (Staging), in the same ethernet network and under the same TiVo owner/user
     (the user can also be found and modified as a flag in TCD Tracker: SG_0026125897).
     
+  Pair TiVo box with Amazon Alexa as skill (8th August 2018)
+    https://www.amazon.com/TiVo-Inc/dp/B07BZMC6K5 -> Manage In TV & Video -> Skills -> Serach "TiVo"
+    ... Get pairing code from the TiVo box by lauching the Application "WORKS WITH alexa",
+    Stb should have these flags in Production enviroment: DG_alexa , DC_Standard
+    
   
