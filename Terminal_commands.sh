@@ -20,6 +20,10 @@ export SRCROOT=~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot
 #TcdClient full build
 cd $SRCROOT && cbe NO_TESTS=1 NO_AUDIT=1 make -j16 && cbe make unsymlink && cbe make strip && cbe make xnfsimage && cbe make monolithic
 
+#Builds from United States of America:
+export DIST_ROOT=/net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms
+export RPMDIR=/net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms
+
 #TcdClient Atlas build
 cd $SRCROOT/atlas/video && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #TcdClient TVSQL build
