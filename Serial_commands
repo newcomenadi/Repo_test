@@ -5,15 +5,18 @@ printenv
 unsetenv STARTUP
 cp -rv ~/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root/platform/Gen12/kernel/zkernel.px2 /tftpboot/Minos_gen12
 
+
 <<======================><======================>>release-mips_server_Kernel<<======================><======================>>
 setenv -p bn "memload boot cm; ifconfig -auto eth0; boot -loader=px xnfs14.tivo.com:/tftpboot/vmlinux-ch.px 'nfsinit=10.131.5.52:/home/adrian/sandbox/agherca-workspace2/b-tcdclient-harmony/release-mips/tivo_root'"
 setenv -p bn "memload boot cm; ifconfig -auto eth0; boot -loader=px xnfs14.tivo.com:/tftpboot/vmlinux-ch.px 'nfsinit=10.131.5.52:/home/adrian/sandbox/agherca-workspace2/b-tcdclient-harmony/release-mips/tivo_root rw sysgen=true'"
 setenv -p bn "memload boot cm; ifconfig -auto eth0; boot -loader=px xnfs14.tivo.com:/tftpboot/vmlinux-ch.px 'nfsinit=10.131.5.52:/home/adrian/sandbox/agherca-workspace2/b-tcdclient-harmony/release-mips/tivo_root rw handcraft=true'"
 
+
 <<======================><======================>>release-mips_local_Kernel<<======================><======================>>
 setenv -p bn "memload boot cm; ifconfig -auto eth0; boot -loader=px 10.131.5.52:/tftpboot/vmlinux.px 'nfsinit=10.131.5.52:/home/adrian/sandbox/agherca-workspace2/b-tcdclient-harmony/release-mips/tivo_root'"
 setenv -p bns "memload boot cm; ifconfig -auto eth0; boot -loader=px 10.131.5.52:/tftpboot/vmlinux.px 'nfsinit=10.131.5.52:/home/adrian/sandbox/agherca-workspace2/b-tcdclient-harmony/release-mips/tivo_root rw sysgen=true'"
 setenv -p bnh "memload boot cm; ifconfig -auto eth0; boot -loader=px 10.131.5.52:/tftpboot/vmlinux.px 'nfsinit=10.131.5.52:/home/adrian/sandbox/agherca-workspace2/b-tcdclient-harmony/release-mips/tivo_root rw handcraft=true'"
+
 
 <<======================><======================>>dev-mipsel_local_Kernel_Leo_Mini<<======================><======================>>
 setenv Go "boot -tftp=10.131.14.176:Mini_gen08/vmlinux.px nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-mipsel/tivo_root rw"
@@ -22,8 +25,11 @@ setenv Go "boot -tftp=10.131.14.176:Mini_gen08/vmlinux.px nfsinit=10.131.14.176:
 <<======================><======================>>dev-arm_local_Kernel_Minos_Bolt<<======================><======================>>
 setenv -p STARTUP 'boot -tftp=10.131.14.176:Minos_gen12/zkernel.px2 nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root rw'
 
+
 <<======================><======================>>dev-arm_server_Kernel_VirginMedia_LeapFrog<<======================><======================>>
 SSBL>auto
 setenv -p go "ifconfig eth0 -auto; sleep 100; boot -pkg xnfs12.trec.tivo.com:/dev-arm/Arr01/kernel/zkernel-harmony.pkg 'nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root ip=dhcp BCC=production rw sysgen=false handcraft=false'"
 setenv -p STARTUP "$go"
 setenv -p STARTUP "ifconfig eth0 -auto; sleep 100; boot -pkg xnfs12.trec.tivo.com:/dev-arm/Arr01/kernel/zkernel-harmony.pkg 'nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root ip=dhcp BCC=production rw'"
+
+
