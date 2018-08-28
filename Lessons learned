@@ -378,4 +378,8 @@ Google Assitant on Linux, script (25th July 2018)
     export PYTHONPATH=$ROOT/tvlib/python
     ./lmshell.py <server IP> 2193 tsn:<TSN>  
 
-
+  Find build version on the box and/or on the station PC (28th august 2018)
+    $TIVO_ROOT /etc/build-version
+  Find build version on the box through telnet (28th august 2018)
+    telnet box_ip
+    env | grep -i SwSystem
