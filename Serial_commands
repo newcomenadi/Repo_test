@@ -4,12 +4,13 @@ setenv -p STARTUP "$bn"
 setenv -p STARTUP 'boot...'  or  setenv -p STARTUP "boot..."
 printenv
 unsetenv STARTUP
-cp -rv ~/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root/platform/Gen12/kernel/zkernel.px2 /tftpboot/Minos_gen12
+
 
 
 
 
 <<======================><======================>>dev-arm_local_Kernel_Minos_Bolt<<======================><======================>>
+cp -rv ~/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root/platform/Gen12/kernel/zkernel.px2 /tftpboot/Minos_gen12
 boot -tftp=10.131.14.176:Minos_gen12/zkernel.px2 nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root rw
 
 
