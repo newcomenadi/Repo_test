@@ -1,6 +1,7 @@
 <<======================><======================>>Miscellaneous<<======================><======================>>
 setenv -p bd "memload boot cm; sleep 1500; memload kernel; bootram -samelf -loader=smtpx ram:0xc1000000 'root=/dev/sda4 rw"
 setenv -p STARTUP "$bn"
+setenv -p STARTUP 'boot...'  or  setenv -p STARTUP "boot..."
 printenv
 unsetenv STARTUP
 cp -rv ~/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root/platform/Gen12/kernel/zkernel.px2 /tftpboot/Minos_gen12
@@ -9,11 +10,11 @@ cp -rv ~/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root/platfo
 
 
 <<======================><======================>>dev-arm_local_Kernel_Minos_Bolt<<======================><======================>>
-setenv -p STARTUP 'boot -tftp=10.131.14.176:Minos_gen12/zkernel.px2 nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root rw'
+boot -tftp=10.131.14.176:Minos_gen12/zkernel.px2 nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root rw
 
 
 <<======================><======================>>dev-mipsel_local_Kernel_Leo_Mini<<======================><======================>>
-setenv Go "boot -tftp=10.131.14.176:Mini_gen08/vmlinux.px nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-mipsel/tivo_root rw"
+boot -tftp=10.131.14.176:Mini_gen08/vmlinux.px nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-mipsel/tivo_root rw
 
 
 <<======================><======================>>dev-arm_local_Kernel_Dexter_Mini4K<<======================><======================>>
