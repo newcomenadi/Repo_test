@@ -22,6 +22,11 @@ setenv -p bnh "memload boot cm; ifconfig -auto eth0; boot -loader=px 10.131.5.52
 setenv Go "boot -tftp=10.131.14.176:Mini_gen08/vmlinux.px nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-mipsel/tivo_root rw"
 
 
+<<======================><======================>>dev-arm_local_Kernel_Dexter_Mini4K<<======================><======================>>
+cp -rv ~/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root/platform/Arr04/kernel/zkernel.bdl /tftpboot/Dexter_Arr04
+ifconfig -auto eth0; sleep 100; tivoboot -tftp=10.131.14.176:Dexter_Arr04/zkernel.bdl 'nfsinit=10.131.6.175:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root rw ip=dhcp allow_local=true'
+
+
 <<======================><======================>>dev-arm_local_Kernel_Minos_Bolt<<======================><======================>>
 setenv -p STARTUP 'boot -tftp=10.131.14.176:Minos_gen12/zkernel.px2 nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root rw'
 
