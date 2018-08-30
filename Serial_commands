@@ -15,7 +15,8 @@ boot -tftp=10.131.14.176:Minos_gen12/zkernel.px2 nfsinit=10.131.14.176:/home/agh
 
 
 <<======================><======================>>dev-mipsel_local_Kernel_Leo_Mini<<======================><======================>>
-boot -tftp=10.131.14.176:Mini_gen08/vmlinux.px nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-mipsel/tivo_root rw
+cp -rv ~/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-mipsel/tivo_root/platform/??? /tftpboot/MiniLeo_gen08/vmlinux.px
+boot -tftp=10.131.14.176:MiniLeo_gen08/vmlinux.px nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-mipsel/tivo_root rw
 
 
 <<======================><======================>>dev-arm_local_Kernel_Dexter_Mini4K<<======================><======================>>
