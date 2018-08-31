@@ -25,7 +25,7 @@ ifconfig -auto eth0; sleep 100; tivoboot -tftp=10.131.14.176:Dexter_Arr04/zkerne
 
 
 <<======================><======================>>dev-arm_local_Kernel_Taos_Arris<<======================><======================>>
-cp -rv ~/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root/platform/Arr03/kernel/zimage.bdl /tftpboot/Taos_Arr03
+cp -rv ~/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root/platform/Arr03/kernel/zkernel.bdl /tftpboot/Taos_Arr03
 ifconfig -auto eth0; sleep 100; tivoboot -tftp=10.131.14.176:Taos_Arr03/zimage.bdl 'nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root rw ip=dhcp allow_local=true'
 
 
