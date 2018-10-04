@@ -248,5 +248,9 @@ alias srctcdpkg='echo -e "\033[36mcd ~/sandbox/agherca-workspace2/b-tcdpkg-harmo
 alias makehost='echo -e "\033[36mcd ~/sandbox/agherca-workspace2/b-tcdui-mainline/srcroot/ && cbe NO_AUDIT=1 NO_TESTS=1 NO_ENCORE=1 make\n\033[0m" && \
 				cd ~/sandbox/agherca-workspace2/b-tcdui-mainline/srcroot/ && cbe NO_AUDIT=1 NO_TESTS=1 NO_ENCORE=1 make'
 
+alias buildus='echo -e "\033[36mBuildFromUS\n\033[0m" && \
+			  export DIST_ROOT=/net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms && \
+			  export RPMDIR=/net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms'
+
 alias setuproots='echo -e "\033[36mcbe make setup-roots\n\033[0m" && \
 				  cbe make setup-roots'
