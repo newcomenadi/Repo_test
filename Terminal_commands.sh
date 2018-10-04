@@ -24,6 +24,12 @@ cd $SRCROOT && cbe NO_TESTS=1 NO_AUDIT=1 make -j16 && cbe make unsymlink && cbe 
 export DIST_ROOT=/net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms
 export RPMDIR=/net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms
 
+#Build with push to TCDPKG
+cd $SRCROOT && cbe make push-script>>push2tcdpkg.sh && subl push2tcdpkg.sh
+#edit# export PUSH=1
+#edit# PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdpkg-harmony
+#edit# export PUSH_TIVO_SYSTEM=dev-arm
+
 #TcdClient Atlas build
 cd $SRCROOT/atlas/video && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #TcdClient TVSQL build
