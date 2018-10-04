@@ -239,9 +239,12 @@ alias ij='srchost && \
 alias srchost='echo -e "\033[36mcd ~/sandbox/agherca-workspace2/b-tcdui-mainline/srcroot/ && source SOURCEME.SH dev-host\n\033[0m" && \
 			   cd ~/sandbox/agherca-workspace2/b-tcdui-mainline/srcroot/ && source SOURCEME.SH dev-host'
 
-alias srctcd='echo -e "\033[36mcd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/ && source SOURCEME.SH dev-arm\n\033[0m" && \
+alias srctcdclient='echo -e "\033[36mcd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/ && source SOURCEME.SH dev-arm\n\033[0m" && \
 			  cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/ && source SOURCEME.SH dev-arm'
 
+alias srctcdpkg='echo -e "\033[36mcd ~/sandbox/agherca-workspace2/b-tcdpkg-harmony/srcroot/ && source SOURCEME.SH dev-arm\n\033[0m" && \
+			  cd ~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/ && source SOURCEME.SH dev-arm'
+			  
 alias makehost='echo -e "\033[36mcd ~/sandbox/agherca-workspace2/b-tcdui-mainline/srcroot/ && cbe NO_AUDIT=1 NO_TESTS=1 NO_ENCORE=1 make\n\033[0m" && \
 				cd ~/sandbox/agherca-workspace2/b-tcdui-mainline/srcroot/ && cbe NO_AUDIT=1 NO_TESTS=1 NO_ENCORE=1 make'
 
