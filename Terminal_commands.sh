@@ -29,6 +29,9 @@ cd $SRCROOT && cbe make push-script>>push2tcdpkg.sh && subl push2tcdpkg.sh
 #edit# export PUSH=1
 #edit# PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdpkg-harmony
 #edit# export PUSH_TIVO_SYSTEM=dev-arm
+#or:
+    export PUSH=1 && export PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdpkg-harmony && export PUSH_TIVO_SYSTEM=dev-arm && export PUSH_TOOLROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/toolroot && export PUSH_TIVO_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root && export PUSH_TESTROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root/testbin && export PUSH_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/root
+
 
 #TcdClient Atlas build
 cd $SRCROOT/atlas/video && cbe make -j16 && cbe make linkroot && cbe make copyimage
