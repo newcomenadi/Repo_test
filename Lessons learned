@@ -383,3 +383,11 @@ Google Assitant on Linux, script (25th July 2018)
   Find build version on the box through telnet (28th august 2018)
     telnet box_ip
     env | grep -i SwSystem
+    
+  Outer procedures error when trying to cbe make (setup-roots ..or anything else) (9th October 2018)
+    Din cauza ca nu poate fi accesat /net/10.131.8.34/dist/rpms/ dar ping merge
+    
+    
+    
+    
+    
