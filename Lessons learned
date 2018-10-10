@@ -386,8 +386,11 @@ Google Assitant on Linux, script (25th July 2018)
     
   Outer procedures error when trying to cbe make (setup-roots ..or anything else) (9th October 2018)
     Din cauza ca nu poate fi accesat /net/10.131.8.34/dist/rpms/ dar ping merge
-    
-    
+  
+  Switch back to classic cbe from dcbe (10th October 2018)
+    If both CBEs (cbe and dcbe) are installed, and the dcbe is the last one installed
+    then run this command to switch back cbe to the classic cbe but also keep the dcbe:
+    sudo cp /home/agherca/AdGh/Kits/CBE/cbe /usr/local/bin
     
     
     
