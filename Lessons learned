@@ -392,5 +392,7 @@ Google Assitant on Linux, script (25th July 2018)
     then run this command to switch back cbe to the classic cbe but also keep the dcbe:
     sudo cp /home/agherca/AdGh/Kits/CBE/cbe /usr/local/bin
     
+  Temporary settings for DCBE applied only to my workstation (Ovidiu Gheorghies 10th October 2018)
+    export DCBE_RUN_ARGS="--uts=host --dns=10.131.8.39 --dns=192.168.243.100"
     
     
