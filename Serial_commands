@@ -9,10 +9,15 @@ unsetenv STARTUP
 
 
 
-<<======================><======================>>dev-arm_local_Kernel_Minos_Bolt<<======================><======================>>
+<<======================><======================>>Harmony_dev-arm_local_Kernel_Minos_Bolt<<======================><======================>>
 cp -rv ~/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root/platform/Gen12/kernel/zkernel.px2 /tftpboot/Minos_gen12
 boot -tftp=10.131.14.176:Minos_gen12/zkernel.px2 nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root rw
 boot -tftp=10.131.14.176:Minos_gen12/zkernel.px2 nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdpkg-harmony/dev-arm/tivo_root rw
+
+
+<<======================><======================>>MIRA-dev-arm_local_Kernel_Minos_Bolt<<======================><======================>>
+cp -rv ~/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root/platform/Gen12/kernel/zkernel.px2 /tftpboot/Minos_gen12
+xxxxxxxxxxxxxxxxxx ...TBD
 
 
 <<======================><======================>>dev-mipsel_local_Kernel_Leo_Mini<<======================><======================>>
