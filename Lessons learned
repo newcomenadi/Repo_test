@@ -399,3 +399,20 @@ Google Assitant on Linux, script (25th July 2018)
     Get to last screen before the actual scan.
     Clear , Clear, Enter, Enter, enter code (000(procustion), 225 staging)
     Works on TiVo Minos Bolt boxes at least.
+
+  Boot box from local Hard disk (Stefan Balmus 26th October 2018)
+    Get the build name from here: http://nasfs01.tivo.com/packs/packs_qt/packs/packs/release-arm/
+    Boot box from anywhere (normally) with sysgen=true
+    telnet box ip 10.131.5.94
+      Insert using: vi /etc/resolv.conf
+      press "i" to edit
+      add "search tivo.com"
+      press ":wq" to save and exit
+      bash-2.02 # /tools/install-release b-tcdclient-harmony.2015.06.04-2147-USC-11
+      bash-2.02 # sync && reboot
+    serial console
+      disk "root=/dev/mmca4"
+      reset
+  
+  
+  
