@@ -47,6 +47,11 @@ cd $SRCROOT/sw/huxley && cbe make -j16 && cbe make linkroot && cbe make copyimag
 #*TcdClient TivoApp build (*always build this after one of the above!!)
 cd $SRCROOT/sw/tivoapp && cbe make -j16 && cbe make linkroot && cbe make copyimage
 
+
+<<======================><======================>>DCBE_Temporary_Setup<<======================><======================>>
+export DCBE_RUN_ARGS="--uts=host --dns=10.131.8.39 --dns=192.168.243.100"
+
+
 <<======================><======================>>Bootstrapping-InitialSetup<<======================><======================>>
 cbe make clobber && cbe make setup-roots && cbe make unsymlink && cbe make strip && cbe make xnfsimage && cbe make monolithic
 
