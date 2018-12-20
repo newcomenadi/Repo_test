@@ -414,5 +414,23 @@ Google Assitant on Linux, script (25th July 2018)
       disk "root=/dev/mmca4"
       reset
   
-  
+  Backtrace logs encoding/decoding (20th December 2018)
+    Get these logs from TSN backhaul:
+      bt -t /tvbin/tivoapp <<END_OF_BT
+        tcd 1
+        hpk Arr01
+        ...
+        ...
+        ...
+        0xb6576c68 0xb65775b0 0xb65778c4 0xb6577a0c 0xb6575938 0xb65abbb8 0xb65cdc74
+        0xb6254da0 0xb6063cf0
+      END_OF_BT
+
+      ...Then copy & paste these logs into one of these links:
+      http://triage-services/tmkbt/tmkbt.php
+      http://stringtheory.tivo.com/tmkbt?view=Tool
+    
+    
+    
+    
   
