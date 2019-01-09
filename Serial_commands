@@ -56,3 +56,8 @@ setenv -p STARTUP "$go"
 setenv -p STARTUP "ifconfig eth0 -auto; sleep 100; boot -pkg xnfs12.trec.tivo.com:/dev-arm/Arr01/kernel/zkernel-harmony.pkg 'nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root ip=dhcp BCC=production rw'"
 
 
+<<======================><======================>>Broadcom_Bootloader&Kernel_Minos_Bolt<<======================><======================>>
+<<======================>https://wiki.tivo.com/wiki/Working_in_b-tcdbroadcom-mainline3<======================>>
+boot -raw 10.131.14.176:TestNexusBroadcom_gen12/vmlinuz-arm 'root=/dev/nfs nfsroot=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdbroadcom-mainline3/srcroot/broadcom/hpk/drivers/unified/_KernelNfsShare/romfs rw ip=dhcp vmalloc=526m bmem=534m@490m bmem=540m@2532m'
+
+
