@@ -432,7 +432,7 @@ Google Assitant on Linux, script (25th July 2018)
     
     Location of an app in Linux (Andrei Zanoaga 9th January 2019)
       $ whereis <application_name>
-      <application_name> /pathroot/path1/path2
+      <application_name>: /pathroot/path1/path2
     
     
   
