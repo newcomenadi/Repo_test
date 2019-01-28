@@ -6,6 +6,7 @@ uname -m (processor type)
 uname -a
 ps ax | grep cinnamon; kill PID
 netstat (network statistics)
+top
 
 
 <<======================><======================>>Hydra<<======================><======================>>
