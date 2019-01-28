@@ -7,6 +7,7 @@ uname -a
 ps ax | grep cinnamon; kill PID
 netstat (network statistics)
 top
+lscpu
 
 
 <<======================><======================>>Hydra<<======================><======================>>
