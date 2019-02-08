@@ -186,7 +186,7 @@ cbe ~/sandbox/ijidea/2018.x.xx/bin/idea.sh &>/dev/null &
 #Launch Qt Creator 4.4.1 (Community)
 #File -> New File or Project...
 #	->Projects -> Import Project -> Import Existing Project -> Choose...
-#	->Project name: QtPrj_TiVo
+#	->Project name: QtPrj_TcdClient
 #	->Location: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot -> Next ->
 #	->Show files matching: *.cc; *.cpp; *.cp; *.cxx; *.c++; *.h; *.hh; *.hpp; *.hxx;*.cydoc;*.xml;*.schema;*.C;*.contract;*.cyimp;*.idl;Makefile;ismdefs;ismrules;*.py;*.c
 #	->Hide files matching: 
