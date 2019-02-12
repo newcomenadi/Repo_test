@@ -10,7 +10,9 @@ unsetenv STARTUP
 
 <<======================><======================>>Harmony_dev-arm64_local_Kernel_Keystone<<======================><======================>>
 cp -rv ~/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm64/tivo_root/platform/Arr05/kernel/vmlinux.gz /tftpboot/Keystone_Arr05
-boot -tftp=10.131.14.176:Keystone_Arr05/vmlinux.gz "nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdpkg-harmony/dev-arm64/tivo_root rw"
+//boot -tftp=10.131.14.176:Keystone_Arr05/vmlinux.gz "nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdpkg-harmony/dev-arm64/tivo_root rw"
+ifconfig eth0 -auto &&  tivoboot -tftp=10.131.14.176:Keystone_Arr05/zimage.bdl 'nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdpkg-harmony/dev-arm64/tivo_root rootwait rw ip=dhcp DISABLE_HDCP=1 MG3_SECURE=1'
+
 
 <<======================><======================>>Harmony_dev-arm_local_Kernel_Minos_Bolt<<======================><======================>>
 cp -rv ~/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root/platform/Gen12/kernel/zkernel.px2 /tftpboot/Minos_gen12
