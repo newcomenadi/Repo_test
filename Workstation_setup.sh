@@ -206,6 +206,11 @@ cbe ~/sandbox/ijidea/2018.x.xx/bin/idea.sh &>/dev/null &
 #		(e.g.  	in TvLiveCacheAction.C -> #include <appact/TvAppActClient.h>; 
 #			in QtPrj_TiVo.includes -> exists sw/huxley/common/include/huxley
 #	 		in QtPrj_TiVo.includes -> add/modify sw/huxley/common/include)
+#		or
+#		(e.g.	in qtTcdClient.pro 
+#				INCLUDEPATH = \
+#				...
+#		$$PWD/sw/huxley/common/include \	(removed /huxley))
 #When starting Qt Creator (Community) open the project using:
 	#~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/QtPrj_Name.creator
 #QtPrj_Name.pro  is not used and can be removed
