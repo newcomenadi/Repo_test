@@ -87,7 +87,7 @@ cd ~/.../b-tcdschema-mainline/srcroot/
 source SOURCEME.SH dev-x86
 cbe make push-script>>push2tcdpkg.sh
 subl push2tcdpkg.sh
-    export PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdokg-harmony
+    export PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdpkg-harmony
     export PUSH_TIVO_SYSTEM=dev-arm
 source push2tcdpkg.sh
 cbe PUSH=1 NO_TESTS=1 NO_AUDIT=1 make
