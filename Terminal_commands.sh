@@ -85,11 +85,11 @@ cd $SRCROOT && cbe make push-script>>push2tcdpkg.sh && subl push2tcdpkg.sh
 <<======================><======================>>Push TcdSchema into TcdClient<<======================><======================>>
 cd ~/.../b-tcdschema-mainline/srcroot/
 source SOURCEME.SH dev-x86
-cbe make push-script>>push2tcdclient.sh
-subl push2tcdclient.sh
-    export PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdclient-harmony
+cbe make push-script>>push2tcdpkg.sh
+subl push2tcdpkg.sh
+    export PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdokg-harmony
     export PUSH_TIVO_SYSTEM=dev-arm
-source push2tcdclient.sh
+source push2tcdpkg.sh
 cbe PUSH=1 NO_TESTS=1 NO_AUDIT=1 make
 
 
