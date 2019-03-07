@@ -64,6 +64,7 @@ SSBL>auto
 setenv -p go "ifconfig eth0 -auto; sleep 100; boot -pkg xnfs12.trec.tivo.com:/dev-arm/Arr01/kernel/zkernel-harmony.pkg 'nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root ip=dhcp BCC=production rw sysgen=false handcraft=false'"
 setenv -p STARTUP "$go"
 setenv -p STARTUP "ifconfig eth0 -auto; sleep 100; boot -pkg xnfs12.trec.tivo.com:/dev-arm/Arr01/kernel/zkernel-harmony.pkg 'nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root ip=dhcp BCC=production rw'"
+ifconfig eth0 -auto; sleep 20; boot -pkg 10.131.14.176:Leapfrog_Arr01/zimage 'nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdpkg-harmony-encore/dev-arm/tivo_root ip=dhcp BCC=production rw'
 
 
 <<======================><======================>>Broadcom_Bootloader&Kernel_Minos_Bolt<<======================><======================>>
