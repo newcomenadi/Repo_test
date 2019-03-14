@@ -6,6 +6,10 @@ printenv
 unsetenv STARTUP
 
 
+<<======================><======================>>Harmony_dev-arm64_local_Kernel_Topaz<<======================><======================>>
+ifconfig 10.131.4.29 255.0.0.0 10.130.0.1 8.8.8.8
+tivoboot -tftp=10.131.5.52:Topaz_Tec02/vmlinux.bdl 'nfsinit=10.131.5.52:/home/agherca/sandbox/agherca-workspace2/b-tcdpkg-harmony/dev-arm64/tivo_root rw'
+>> no test.conf needed !
 
 
 <<======================><======================>>Harmony_dev-arm64_local_Kernel_Keystone<<======================><======================>>
