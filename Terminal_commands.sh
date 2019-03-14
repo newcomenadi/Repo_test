@@ -74,12 +74,23 @@ cd $SRCROOT && cbe make push-script>>push2tcdpkg.sh && subl push2tcdpkg.sh
 #edit# PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdpkg-harmony
 #edit# export PUSH_TIVO_SYSTEM=dev-arm
 
-#or:
+#or(push script already exists):
     #dev-arm:
     export PUSH=1 && export PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdpkg-harmony && export PUSH_TIVO_SYSTEM=dev-arm && export PUSH_TOOLROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/toolroot && export PUSH_TIVO_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root && export PUSH_TESTROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root/testbin && export PUSH_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/root
     
     #dev-mipsel
     export PUSH=1 && export PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdpkg-harmony && export PUSH_TIVO_SYSTEM=dev-mipsel && export PUSH_TOOLROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/toolroot && export PUSH_TIVO_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root && export PUSH_TESTROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root/testbin && export PUSH_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/root
+    
+#or (dev cheats ):
+    #dev-arm64
+    . push2tcdpkg.sh
+    echo $PUSH_TGT
+    echo $PUSH_TIVO_SYSTEM
+    export TV_SANDBOXES=~/sandbox/
+    export TV_CHEATS_DIR=$HOME/.cheats
+    function goto-cheats { . $TV_CHEATS_DIR/home.cheats.bash; }
+    goto-cheats
+    dcbe tv_buildism os/hpk
     
 
 <<======================><======================>>Push TcdSchema into TcdClient<<======================><======================>>
