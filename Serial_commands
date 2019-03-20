@@ -44,7 +44,7 @@ boot -tftp=10.131.14.176:ArgonRoamio_gen10/vmlinux.px "nfsinit=10.131.14.176:/ho
 cp -rv ~/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root/platform/Arr04/kernel/zkernel.bdl /tftpboot/Dexter_Arr04
 ifconfig -auto eth0; sleep 100; tivoboot -tftp=10.131.14.176:Dexter_Arr04/zkernel.bdl 'nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root rw ip=dhcp allow_local=true'
 setenv -p goANCI "ifconfig -auto eth0; sleep 100; tivoboot -tftp=10.131.14.62:zkernel.bdl 'nfsinit=10.131.14.62:/sandbox/acirdariu/tcdpkg/b-tcdpkg-harmony/release-arm/tivo_root rw'"
-setenv -p goANGZ "ifconfig -auto eth0 ; tivoboot -tftp=10.131.5.129:Arr04/zimage.bdl 'nfsinit=10.131.5.43:/sandbox/agazi-ws/b-tcdpkg-harmony/release-arm/tivo_root allow_local=true'"
+setenv -p goANGZ "ifconfig -auto eth0; tivoboot -tftp=10.131.5.129:Arr04/zimage.bdl 'nfsinit=10.131.5.43:/sandbox/agazi-ws/b-tcdpkg-harmony/release-arm/tivo_root allow_local=true'"
 setenv -p goADGH2 "ifconfig -auto eth0; sleep 100; tivoboot -tftp=10.131.14.176:Dexter_Arr04/DBradu/zkernel.bdl 'nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root rw ip=dhcp allow_local=true'"
 setenv -p goADGH "ifconfig -auto eth0; sleep 100; tivoboot -tftp=10.131.14.176:Dexter_Arr04/zkernel.bdl 'nfsinit=10.131.14.176:/home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/tivo_root allow_local=true rw'"
 
