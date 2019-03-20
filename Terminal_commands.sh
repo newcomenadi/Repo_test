@@ -58,7 +58,7 @@ export DCBE_RUN_ARGS="--uts=host --dns=10.131.8.39 --dns=192.168.243.100"
 
 
 <<======================><======================>>Bootstrapping-InitialSetup<<======================><======================>>
-cbe make clobber && cbe make setup-roots && cbe make unsymlink && cbe make strip && cbe make xnfsimage && cbe make monolithic
+cbe make clobber && dcbe make setup-roots && dcbe make unsymlink && dcbe make strip && dcbe make xnfsimage && dcbe make monolithic
 
 
 <<======================><======================>>Compile & run Unit Tests<<======================><======================>>
