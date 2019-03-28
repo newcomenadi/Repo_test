@@ -1,12 +1,12 @@
 bash-3.2 # ...
 
 <<======================><======================>> TcdPlatform debug logs <<======================><======================>>
+#Look for TV_HPK_MODULE("HpkTivoRemoteInput") in *.C file
 HpkLogDebug Tec02PlatformRemoteInputRf4ce -C 25
-
 HpkLogDebug Tec02PlatformRemoteInputRf4ce -F 25
 
 <<======================><======================>> TcdClient debug logs <<======================><======================>>
-#Look for SETUP_DEBUG_ENV("RECORDER") in .C file
+#Look for SETUP_DEBUG_ENV("RECORDER") in *.C file
 DebugPrintEdit HUXLEYDEVICE -C 25
 DebugPrintEdit HUXLEYDEVICE -F 25
 
