@@ -5,6 +5,8 @@ bash-3.2 # ...
 HpkLogDebug Tec02PlatformRemoteInputRf4ce -C 25
 HpkLogDebug Tec02PlatformRemoteInputRf4ce -F 25
 
+tail -f -n23 /var/log/kernel | grep -i ADGH
+
 <<======================><======================>> TcdClient debug logs <<======================><======================>>
 #Look for SETUP_DEBUG_ENV("RECORDER") in *.C file
 DebugPrintEdit HUXLEYDEVICE -C 25
