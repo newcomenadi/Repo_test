@@ -186,7 +186,7 @@ cbe ~/sandbox/ijidea/2018.x.xx/bin/idea.sh &>/dev/null &
 #Launch Qt Creator 4.4.1 (Community)
 #File -> New File or Project...
 #	->Projects -> Import Project -> Import Existing Project -> Choose...
-#	->Project name: QtPrj_TcdClient
+#	->Project name: QtPrj_TcdClient or QtPrj_TcdPlatform_Hpk
 #	->Location: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot -> Next ->
 #	->Show files matching: *.cc; *.cpp; *.cp; *.cxx; *.c++; *.h; *.hh; *.hpp; *.hxx;*.cydoc;*.xml;*.schema;*.C;*.contract;*.cyimp;*.idl;Makefile;ismdefs;ismrules;*.py;*.c
 #	->Hide files matching: 
@@ -200,7 +200,8 @@ cbe ~/sandbox/ijidea/2018.x.xx/bin/idea.sh &>/dev/null &
 #		->Apply ->OK
 #	->Finish
 #Resolve includes in QtPrj_Name.includes like this:
-#	Important!! At the end of this file: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/QtPrj_TiVo.includes
+#	A. For QtPrj_TcdClient:
+#	Important!! At the end of this file: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/QtPrj_TcdClient.includes
 #		Add this line: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/dev-arm/root/include
 #	Not so important. Add modified lines with ISM_Name after the last slash removed
 #		(e.g.  	in TvLiveCacheAction.C -> #include <appact/TvAppActClient.h>; 
@@ -211,6 +212,34 @@ cbe ~/sandbox/ijidea/2018.x.xx/bin/idea.sh &>/dev/null &
 #				INCLUDEPATH = \
 #				...
 #		$$PWD/sw/huxley/common/include \	(removed /huxley))
+#	B. For QtPrj_TcdPlatform_Hpk:
+#	Important!! At the end of this file: /home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/srcroot/os/hpk/QtPrj_TcdPlatform_Hpk.includes
+#		Add these lines:
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/dev-arm64/root/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/srcroot/os/hpkinterfaces/common/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/srcroot/os/drivers_k26/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/srcroot/os/hpk/common/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/lib/gcc/mipsel-TiVo-linux-gnu/4.8.3/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/lib/gcc/mips-TiVo-linux-gnu/4.8.3/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/lib/gcc/arm-TiVo-linux-gnueabi/4.8.3/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/lib/gcc/aarch64-TiVo-linux-gnu/6.3.0/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/lib/gcc/i686-TiVo-linux-gnu/4.8.3/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/mipsel-TiVo-linux-gnu/sys-root/usr/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/mipsel-TiVo-linux-gnu/sys-root/usr/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/mipsel-TiVo-linux-gnu/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/mips-TiVo-linux-gnu/sys-root/usr/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/mips-TiVo-linux-gnu/sys-root/usr/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/mips-TiVo-linux-gnu/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/arm-TiVo-linux-gnueabi/sys-root/usr/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/arm-TiVo-linux-gnueabi/sys-root/usr/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/arm-TiVo-linux-gnueabi/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/aarch64-TiVo-linux-gnu/sys-root/usr/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/aarch64-TiVo-linux-gnu/sys-root/usr/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/aarch64-TiVo-linux-gnu/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/i686-TiVo-linux-gnu/sys-root/usr/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/i686-TiVo-linux-gnu/sys-root/usr/include
+#			/home/agherca/sandbox/agherca-workspace2/b-tcdplatform-mainline3/toolroot/i686-TiVo-linux-gnu/include
+#	
 #When starting Qt Creator (Community) open the project using:
 	#~/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot/QtPrj_Name.creator
 #QtPrj_Name.pro  is not used and can be removed
