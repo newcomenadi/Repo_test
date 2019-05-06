@@ -434,5 +434,15 @@ Google Assitant on Linux, script (25th July 2018)
       $ whereis <application_name>
       <application_name>: /pathroot/path1/path2
     
-    
+  Vulnerabilities Specter and Meltdown (6th May 2019)
+  Andrei Zanoaga:
+    Get Kernel version 4.4.0-xxx
+    Update the firmware of the microprocessor
+    Test:
+        $ grep . /sys/devices/system/cpu/vulnerabilities/*
+            /sys/devices/system/cpu/vulnerabilities/l1tf:Mitigation: PTE Inversion; VMX: conditional cache flushes, SMT vulnerable
+            /sys/devices/system/cpu/vulnerabilities/meltdown:Mitigation: PTI
+            /sys/devices/system/cpu/vulnerabilities/spec_store_bypass:Mitigation: Speculative Store Bypass disabled via prctl and seccomp
+            /sys/devices/system/cpu/vulnerabilities/spectre_v1:Mitigation: __user pointer sanitization
+            /sys/devices/system/cpu/vulnerabilities/spectre_v2:Mitigation: Full generic retpoline, IBPB, IBRS_FW
   
