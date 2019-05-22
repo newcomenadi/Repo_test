@@ -9,6 +9,7 @@ unsetenv STARTUP
 <<======================><======================>>Harmony-encore_dev-mips_local_Kernel_Comapss-Yundo<<======================><======================>>
 ifconfig -auto eth0; boot -elf 10.131.5.52:/tftpboot/CompassYundo_Gen07S/vmlinux 'nfsinit=10.131.5.52:/home/agherca/sandbox/agherca-workspace2/b-tcdpkg-harmony-encore/dev-mips/tivo_root rw'
 
+
 <<======================><======================>>Harmony_dev-arm64_local_Kernel_Topaz<<======================><======================>>
 ifconfig 10.131.4.29 255.0.0.0 10.130.0.1 8.8.8.8
 tivoboot -tftp=10.131.5.52:Topaz_Tec02/vmlinux.bdl 'nfsinit=10.131.5.52:/home/agherca/sandbox/agherca-workspace2/b-tcdpkg-harmony/dev-arm64/tivo_root rw'
