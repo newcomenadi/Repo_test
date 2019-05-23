@@ -5,8 +5,11 @@ setenv -p STARTUP 'boot...'  or  setenv -p STARTUP "boot..."
 printenv
 unsetenv STARTUP
 
+<<======================><======================>>Harmony-encore_dev-mips_local_Kernel_Comapass-Cisco<<======================><======================>>
+ifconfig -auto eth1; boot -elf 10.131.5.52:/tftpboot/CompassCisco_Gen07C/vmlinux 'nfsinit=10.131.5.52:/home/agherca/sandbox/agherca-workspace2/b-tcdpkg-harmony-encore/dev-mips/tivo_root rw'
 
-<<======================><======================>>Harmony-encore_dev-mips_local_Kernel_Comapss-Yundo<<======================><======================>>
+
+<<======================><======================>>Harmony-encore_dev-mips_local_Kernel_Comapass-Yundo<<======================><======================>>
 ecm 32 32; ifconfig -auto eth0; boot -elf 10.131.5.52:/tftpboot/CompassYundo_Gen07S/vmlinux 'nfsinit=10.131.5.52:/home/agherca/sandbox/agherca-workspace2/b-tcdpkg-harmony-encore/dev-mips/tivo_root rw'
 
 
