@@ -6,7 +6,7 @@ printenv
 unsetenv STARTUP
 
 <<======================><======================>>Harmony-encore_dev-mips_local_Kernel_Comapass-Cisco<<======================><======================>>
-ifconfig -auto eth1; boot -elf 10.131.5.52:/tftpboot/CompassCisco_Gen07C/vmlinux 'nfsinit=10.131.5.52:/home/agherca/sandbox/agherca-workspace2/b-tcdpkg-harmony-encore/dev-mips/tivo_root rw'
+ecm 16 16; ifconfig -auto eth1; boot -elf 10.131.5.52:/tftpboot/CompassCisco_Gen07C/vmlinux 'nfsinit=10.131.5.52:/home/agherca/sandbox/agherca-workspace2/b-tcdpkg-harmony-encore/dev-mips/tivo_root rw'
 
 
 <<======================><======================>>Harmony-encore_dev-mips_local_Kernel_Comapass-Yundo<<======================><======================>>
