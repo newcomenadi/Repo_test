@@ -39,7 +39,7 @@ cd $SRCROOT/sw/npk && cbe make -j16 && cbe make linkroot && cbe make copyimage
 cd $SRCROOT/sw/pvr && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #TcdClient Media build
 cd $SRCROOT/sw/media && cbe make -j16 && cbe make linkroot && cbe make copyimage
-#TcdClient StanbbyHost build
+#TcdClient StandbyHost build
 cd $SRCROOT/standby/standbyhost/ && cbe make -j16 && cbe make linkroot && cbe make copyimage
 #TcdClient Aes build
 cd $SRCROOT/triotcd/aes/ && cbe make -j16 && cbe make linkroot && cbe make copyimage
