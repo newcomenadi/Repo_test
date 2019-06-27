@@ -75,14 +75,17 @@ cd $SRCROOT && cbe make push-script>>push2tcdpkg.sh && subl push2tcdpkg.sh
 #edit# export PUSH_TIVO_SYSTEM=dev-arm
 
 #or(push script already exists):
-    #dev-arm:
+    #dev-arm (Minos (Bolt))
     export PUSH=1 && export PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdpkg-harmony && export PUSH_TIVO_SYSTEM=dev-arm && export PUSH_TOOLROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/toolroot && export PUSH_TIVO_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root && export PUSH_TESTROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root/testbin && export PUSH_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/root
     
-    #dev-arm64:
+    #dev-arm64 (Topaz)
     export PUSH=1 && export PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdpkg-harmony && export PUSH_TIVO_SYSTEM=dev-arm64 && export PUSH_TOOLROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/toolroot && export PUSH_TIVO_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root && export PUSH_TESTROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root/testbin && export PUSH_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/root
     
-    #dev-mipsel
+    #dev-mipsel (Mini (Leo))
     export PUSH=1 && export PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdpkg-harmony && export PUSH_TIVO_SYSTEM=dev-mipsel && export PUSH_TOOLROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/toolroot && export PUSH_TIVO_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root && export PUSH_TESTROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root/testbin && export PUSH_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/root
+    
+    #dev-mips (Compass Cisco (Gimbal))
+    export PUSH=1 && export PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdpkg-harmony-encore && export PUSH_TIVO_SYSTEM=dev-mips && export PUSH_TOOLROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/toolroot && export PUSH_TIVO_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root && export PUSH_TESTROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root/testbin && export PUSH_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/root
     
 #or(dev cheats):
     #dev-arm64
