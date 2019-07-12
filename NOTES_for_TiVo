@@ -1,0 +1,129 @@
+9th august 2018
+  DebugPrintEdit TvAesMiddlemindRoute -F 10 && tail -f -n40 /var/tmp/TmkDebug.tmp
+  DebugPrintEdit TvAesUiNavigateOp -F 30
+
+17th august 2018
+  https://wiki.tivo.com/wiki/Netflix_Test_Accounts
+  Account                Password    Used By     Details
+  tester_tivo_us_2@netflix.com    tivo1234    Dan Gillen    endDate=01/01/2020
+  tester_tivo_us_3@netflix.com    tivo1234    Mike Kaufman    endDate=01/01/2020
+  tester_tivo_us_4@netflix.com    tivo12        Leonid Milenky    endDate=01/01/2020
+  tester_tivo_us_5@netflix.com    tivo12        Alex Marchenko    endDate=01/01/2020
+  tester_tivo_us_6@netflix.com    tivo12        Matthew Hopkins    endDate=01/01/2020
+  tester_tivo_us_7@netflix.com    tivo12        Jon Logan    endDate=01/01/2020
+  tester_tivo_us_8@netflix.com    tivo1234    Matthew Hopkins    endDate=01/01/2020
+  tester_tivo_us_9@netflix.com    tivo12        Raja Koduri    endDate=01/01/2020
+  tester_tivo_us_10@netflix.com    tivo12        Field Trials    endDate=01/01/2020
+
+30th august 2018
+  Boxes Petrica Toderica
+  Mini4K A9502B9B88A6790
+  Bolt 8D9000190315D6C
+  
+  Boxes Adrian Gherca
+  MiniLeo AD3000190BFBB2F
+  Bolt 8F90001901E26BD
+
+25th January 2019
+  RF4CE application for remotes, not available for all/old boxes
+  Add "handcraft=true" at the end of the boot command
+  After boot up, "telnet box.ip" to the box
+    rf4cecmd  -f /dev/hiddev1 -c
+    rf4cecmd -f /dev/hiddev1 -p 30
+    rf4cecmd -f /dev/hiddev1 -a 10
+      And a command that I couldn't make it work:
+      HpkRemoteOutputTest -source 0 -pairtest
+
+6th February 2019
+  Make setup-roots with parts of the nuild (parts like toolroot). These parts can be taken from other/newer builds.
+  cd .../srcroot/
+  source SOURCEME dev-flavour
+  observe:
+    SETUP_FLAGS  = --from /net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms/b-tcdclient-mira-4-1/2017.07.24-1051 --to toolroot,root,tivoroot,testroot --p4sync --clean
+  remove:
+    -p4sync , --clean
+    toolroot
+  dcbe /usr/tivo/bin/update-roots --from /net/nasfs01.tivo.com/ifs/unixroot/engineering/dist_nfs/dist_nfs_qt/dist/rpms/b-tcdclient-mira-4-1/2017.07.24-1051 --to root,tivoroot,testroot
+
+12th February 2019
+  Activate debug logs in TcdClient through Telnet (25th-31st October 2017)
+    e.g. in TvRecorder.C look for SETUP_DEBUG_ENV("RECORDER");
+    DebugPrintEdit RECORDER -C 10;
+    DebugPrintEdit RECORDER -F 5;
+    Logs written with TmkLogger can e found in /var/log/tvlog and/or in /var/log/tverr and/or in /var/tmp/TmkDebug.tmp
+    Logs written in file (-F) can be easily monitored using:
+      tail -f -n23 /var/tmp/TmkDebug.tmp | grep -i ADGH
+    
+  Activate debug logs in TcdPlatform through Telnet
+    e.g. TV_HPK_MODULE("HpkTivoRemoteInput");
+    HpkLogDebug HpkTivoRemoteUapi -C 5
+        HpkTivoRemoteInput                       : log level = 5 (debug  ), logging to stdout
+        
+14th February 2019
+  Fix guided (initial) setup issue related to certifcates and date
+  Narcisa Nistor:
+    Venky: "echo 1 > /db/NPK_SMARTBOX_BLOCK_STT - this step is expected to fix the time sync issue."
+    http://pdk01.st.tivo.com:8085/mind/mind26?type=bodySslCertGet&bodyId=tsn:DE200000001555E&swVersion=b-tcdclient-harmony
+    
+18th March 2019
+  How to boot Topaz (series 7) boxes
+    Plug PC ethernet cable in the same switch in which the box is connected.
+    Then run these commands through serial:
+      ifconfig 10.131.4.29 255.0.0.0 10.130.0.1 8.8.8.8
+      tivoboot -tftp=10.131.5.52:Topaz_Tec02/vmlinux.bdl 'nfsinit=10.131.5.52:/home/agherca/sandbox/agherca-workspace2/b-tcdpkg-harmony/dev-arm64/tivo_root rw'
+
+4th April 2019
+  Alexandru Gologan:
+    Pentru orice incident: https://tivo.service-now.com/ess/ Puteti modifica tichetul sa ajunga in coada direct la Iasi IT
+      (Assignment Group = IT CS – Iasi) dupa ce il creati.
+    Per email: *Cable guy switcheroo* din Feb, 12
+    
+10th April 2019
+  Tiberiu Teodorescu (bug 512795, comment 80-81):
+    Install QE build on TiVo STB:
+      bash-3.2 # export PACKSRV=nfsproxy.tivo.com:/packs/packs_qt/packs
+      bash-3.2 # export KITSRV=nfsproxy.tivo.com:/kits
+      bash-3.2 # /tools/install-release b-tcdpkg-harmony.2019.04.10-rest_of_build_ID
+      bash-3.2 # sync && reboot
+    After installation boot using this command:
+      boot -tftp=10.131.14.176:ArgonRoamio_gen10/vmlinux.px 'root=/dev/mmca4'
+
+  7th May 2019
+    Stefan Balmus 
+      Reboot reason on the TiVo box from sticky_file
+        Telnet box_ip
+        cat /db/sticky
+        { REASON_UNKNOWN  = 0,
+          REASON_PANIC    = 1,
+          REASON_CRASHALL = 2,
+          REASON_SWUPGRADE = 3,
+          REASON_EXTERNALSTORAGE_RESTART = 4,
+          REASON_RESTARTORRESET = 5,
+          REASON_CRASH_SINGLE = 6,
+          REASON_WATCHDOG_RESTART = 7,
+          REASON_AUTO_RESTART = 8,
+          REASON_IPTV_DOWNLOADED = 9,
+          REASON_FORCED_REBOOT = 10,
+          REASON_DRIVE_UNPLUGGED = 11,
+          REASON_FSFIX_REBOOT = 12,
+          REASON_MFS_REBOOT = 13,
+          REASON_ZAP_REQUEST = 14,
+          REASON_BOOTMODE_CHANGE = 15,
+          REASON_STARTUP_CHECKLIST_REBOOT = 16,
+          REASON_OVERHEAT = 17,
+        }RebootReason;
+
+  5th June 2019
+    Ionut Dogaru
+      Virgin Media environments + temporary credentials
+      Virgin Media Environments and temporary credentials:
+      Virgin TT1 - https://sp01.vmtt1.tivo.com
+      Virgin TT2 - https://sp01.vmtt2.tivo.com
+      Virgin Lab 1 - https://sp01.vl1.tivo.com
+      Virgin Lab 2 - https://sp01.vl2.tivo.com
+      Virgin Lab 3 - https://sp01.vl3.tivo.com
+      Virgin Staging - https://sp01.vs1.tivo.com
+      Virgin Production - https://sp01.vp1.tivo.com
+          usr: Atuduran
+pwd: changeme
+
