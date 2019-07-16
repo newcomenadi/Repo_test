@@ -87,6 +87,9 @@ cd $SRCROOT && cbe make push-script>>push2tcdpkg.sh && subl push2tcdpkg.sh
     #dev-mips (Compass Cisco (Gimbal))
     export PUSH=1 && export PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdpkg-harmony-encore && export PUSH_TIVO_SYSTEM=dev-mips && export PUSH_TOOLROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/toolroot && export PUSH_TIVO_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root && export PUSH_TESTROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root/testbin && export PUSH_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/root
     
+    #dev-arm (Leapfrog)
+    export PUSH=1 && export PUSH_TGT=~/sandbox/agherca-workspace2/b-tcdpkg-harmony-encore && export PUSH_TIVO_SYSTEM=dev-arm && export PUSH_TOOLROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/toolroot && export PUSH_TIVO_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root && export PUSH_TESTROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/tivo_root/testbin && export PUSH_ROOT=$PUSH_TGT/$PUSH_TIVO_SYSTEM/root
+    
 #or(dev cheats):
     #dev-arm64
     . push2tcdpkg.sh
