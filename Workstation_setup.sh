@@ -263,6 +263,7 @@ cbe ~/sandbox/ijidea/2018.x.xx/bin/idea.sh &>/dev/null &
 #	...Locate...Ctrl+Shift+A...
 #	...Line in current document...Ctrl + G...
 #	->Apply -> OK
+#Tools -> Options... -> Display -> Line annotations
 
 (#bashrc/bash_aliases)
 subl ~/.bash_aliases
