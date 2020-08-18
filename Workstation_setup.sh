@@ -200,7 +200,7 @@ cbe ~/sandbox/ijidea/2018.x.xx/bin/idea.sh &>/dev/null &
 #	->Projects -> Import Project -> Import Existing Project -> Choose...
 #	->Project name: QtPrj_TcdClient or QtPrj_TcdPlatform_Hpk
 #	->Location: /home/agherca/sandbox/agherca-workspace2/b-tcdclient-harmony/srcroot -> Next ->
-#	->Show files matching: *.cc; *.cpp; *.cp; *.cxx; *.c++; *.h; *.hh; *.hpp; *.hxx;*.cydoc;*.xml;*.schema;*.C;*.contract;*.cyimp;*.idl;Makefile;ismdefs;ismrules;*.py;*.c;*.arxml;*.xml
+#	->Show files matching: *.cc; *.cpp; *.cp; *.cxx; *.c++; *.h; *.hh; *.hpp; *.hxx;*.cydoc;*.xml;*.schema;*.C;*.contract;*.cyimp;*.idl;Makefile;ismdefs;ismrules;*.py;*.c;*.arxml;*.xml*.dcm;*.pdl
 #	->Hide files matching: 
 #	->Apply Filter -> <Back -> Next> (Needed for refreshing the filter!) -> Next
 #	->Add to version control: -> Configure... -> Perforce ->
